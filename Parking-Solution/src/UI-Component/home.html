@@ -2,57 +2,52 @@
 <html lang="en-US">
 <head>
     <title>Parking!</title>
-    <link rel="stylesheet" href="homestyles.css">
-    <link rel="stylesheet" href="popup.css">
-    <link rel="stylesheet" href="textbox.css">
+    <link href="homestyles.css" rel="stylesheet">
+    <link href="popup.css" rel="stylesheet">
+    <link href="textbox.css" rel="stylesheet">
 </head>
 <body>
-<nav>
-    <ul>
-        <li class="right">
-            <button class="button button2">
-                <a class="a a1" href="sign.html">Sign in</a>
-            </button>
-        </li>
-        <li class="right right1">
-            <button class="button button2">
-                <a class="a a1" href="register.html">Register</a>
-            </button>
-        </li>
-    </ul>
-</nav>
-<nav>
-    <ul>
-        <li>
-            <a class="a a1" href="home.html">HOME</a>
-        </li>
-        <li>
-            <a class="a a1" href="gragelist.html">GARAGE LIST</a>
-        </li>
-        <li>
-            <a class="a a1" href="reserveAspot.html">RESERVE A SPOT</a>
-        </li>
-        <li>
-            <a class="a a1" href="managebooking.html">MANAGE BOOKING</a>
-        </li>
-    </ul>
-</nav>
-<section>
+<header>
+    <div class="container">
+        <h3 class="projectTitle"><a href="home.html"> ParkingSolution </a></h3>
+        <nav class="navbar fixed-top">
+            <ul>
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="gragelist.html">GARAGE LIST</a></li>
+                <li><a href="reserveAspot.html">RESERVE A SPOT</a></li>
+                <li><a href="managebooking.html">MANAGE BOOKING</a></li>
+                <li><a href="#">REGISTER</a></li>
+                <li><a href="#">LOGIN</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="userInput">
     <label>
-        <input type="text" placeholder="Enter Zip Code....">
+        <input placeholder="Enter Zip Code...." type="text">
     </label>
-    <!-- <input type="text" placeholder="Time-Slot"> -->
-    <label for="cars">Choose a car:</label>
-    <select name="cars" id="cars">
-        <option value="volvo">Volvo</option>
-        <option value="saab">Saab</option>
-        <option value="opel">Opel</option>
-        <option value="audi">Audi</option>
-    </select>
+    <div class="dropdown">
+        <button class="dropbtn">Select Duration</button>
+        <div class="dropdown-content">
+            <a href="#">0.5 hr</a>
+            <a href="#">1 hr</a>
+            <a href="#">2 hr</a>
+            <a href="#">4 hr</a>
+            <a href="#">6 hr</a>
+            <a href="#">8 hr</a>
+            <a href="#">12 hr</a>
+            <a href="#">16 hr</a>
+            <a href="#">20 hr</a>
+            <a href="#">24 hr</a>
+        </div>
+    </div>
     <button class="button button1">get started</button>
-</section>
+</div>
+
 <section class="right">
-    <div class="popup" onclick="myFunction()">or search by garage
+    <div class="popup" onclick="myFunction()">
+        <a href="#">or search by garage</a>
         <span class="popuptext" id="searchByGrage">no function yet</span>
     </div>
     <script>
@@ -63,32 +58,30 @@
         }
     </script>
 </section>
-<section>
-    <ul>
-        <li>
-            <a class="a a2" href="fastestsolution.html">
+<section class="description">
+    <div class="desciption-div">
+        <ul>
+            <li>
                 <strong>FASTEST SOLUTION</strong>
-            </a>
-        </li>
-        <li>
-            <a class="a a2" href="null.html">
+            </li>
+            <li>
                 <strong>GREAT PRICING</strong>
-            </a>
-        </li>
-        <li>
-            <a class="a a2" href="service.html">
+            </li>
+            <li>
                 <strong>BEST SERVICE</strong>
-            </a>
-        </li>
-    </ul>
+            </li>
+        </ul>
+    </div>
 </section>
-<footer class="right">
+<div class="footer">
     <li>
-        <a class="a a1" href="support.html">Support</a>
+        <a class="a a1" href="support.html">
+            <strong>Support</strong></a>
     </li>
     <li>
-        <a class="a a1" href="addgarage.html">Add your garage</a>
+        <a class="a a1" href="addgarage.html">
+            <strong>Add Your Garage</strong></a>
     </li>
-</footer>
+</div>
 </body>
 </html>

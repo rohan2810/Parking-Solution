@@ -19,10 +19,22 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b375c79-32f0-45f6-bbc7-a2c69361aba9" name="Default Changelist" comment="">
+    <list default="true" id="6b375c79-32f0-45f6-bbc7-a2c69361aba9" name="Default Changelist" comment="refactoring and updated landing page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Parking-Solution/src/UI-Component/addgarage.html" beforeDir="false" afterPath="$PROJECT_DIR$/Parking-Solution/src/UI-Component/addgarage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Parking-Solution/src/UI-Component/fastestsolution.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Parking-Solution/src/UI-Component/gragelist.html" beforeDir="false" afterPath="$PROJECT_DIR$/Parking-Solution/src/UI-Component/gragelist.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Parking-Solution/src/UI-Component/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/Parking-Solution/src/UI-Component/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Parking-Solution/src/UI-Component/homestyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/Parking-Solution/src/UI-Component/homestyles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Parking-Solution/src/UI-Component/managebooking.html" beforeDir="false" afterPath="$PROJECT_DIR$/Parking-Solution/src/UI-Component/managebooking.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Parking-Solution/src/UI-Component/null.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Parking-Solution/src/UI-Component/popup.css" beforeDir="false" afterPath="$PROJECT_DIR$/Parking-Solution/src/UI-Component/popup.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Parking-Solution/src/UI-Component/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/Parking-Solution/src/UI-Component/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Parking-Solution/src/UI-Component/reserveAspot.html" beforeDir="false" afterPath="$PROJECT_DIR$/Parking-Solution/src/UI-Component/reserveAspot.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Parking-Solution/src/UI-Component/service.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Parking-Solution/src/UI-Component/sign.html" beforeDir="false" afterPath="$PROJECT_DIR$/Parking-Solution/src/UI-Component/sign.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Parking-Solution/src/UI-Component/support.html" beforeDir="false" afterPath="$PROJECT_DIR$/Parking-Solution/src/UI-Component/support.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Parking-Solution/src/UI-Component/textbox.css" beforeDir="false" afterPath="$PROJECT_DIR$/Parking-Solution/src/UI-Component/textbox.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,6 +93,14 @@
       <updated>1603783768198</updated>
       <workItem from="1603783779369" duration="490000" />
     </task>
+    <task id="LOCAL-00001" summary="landing page">
+      <created>1604288774618</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1604288774618</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -98,11 +118,20 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="landing page" />
+    <MESSAGE value="refactoring and updated landing page" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactoring and updated landing page" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="208" y="31" key="#Project_Structure" timestamp="1603784270730">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="208" y="31" key="#Project_Structure/0.0.1440.900@0.0.1440.900" timestamp="1603784270730" />
+    <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1604299789082">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1604299789082" />
     <state x="419" y="177" key="RollbackChangesDialog" timestamp="1603784168824">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -111,6 +140,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="571" y="371" key="VCS.ChangelistChooser/0.0.1440.900@0.0.1440.900" timestamp="1603784175326" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1604288779312">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1604288779312" />
     <state x="88" y="72" key="new project wizard" timestamp="1603784042685">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

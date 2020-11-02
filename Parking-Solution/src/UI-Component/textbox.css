@@ -1,5 +1,4 @@
 input[type=text] {
-    width: 100%;
     padding: 12px 20px;
     margin: auto;
     box-sizing: border-box;
@@ -10,4 +9,4 @@ input[type=text] {
     border-radius: 12px;
     width: 200px;
     font-size: 20px;
-  }
+}
