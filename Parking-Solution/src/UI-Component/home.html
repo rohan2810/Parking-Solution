@@ -1,93 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
-    <title>HASSLE FREE PARKING!</title>
+    <title>Parking!</title>
     <link rel="stylesheet" href="homestyles.css">
     <link rel="stylesheet" href="popup.css">
     <link rel="stylesheet" href="textbox.css">
 </head>
 <body>
-    <header class = "center">
-        <h1>
-            HASSLE FREE PARKING!
-        </h1>
-    </header>
-    <nav>
-        <ul>
-            <li class = "right">
-                <button class="button button2">
-                    <a class = "a a1" href="sign.html">Sign in</a>
-                </button>
-            </li>
-            <li class = "right right1">
-                <button class="button button2">
-                    <a class = "a a1" href="register.html">Register</a>
-                </button>
-            </li>
-        </ul>
-    </nav>
-    <nav>
-        <ul>
-            <li>
-                <a class = "a a1" href="home.html">HOME</a>
-            </li>
-            <li>
-                <a class = "a a1" href="gragelist.html">GARAGE LIST</a>
-            </li>
-            <li>
-                <a class = "a a1" href="reserveAspot.html">RESERVE A SPOT</a>
-            </li>
-            <li>
-                <a class = "a a1" href="managebooking.html">MANAGE BOOKING</a>
-            </li>
-        </ul>
-    </nav>
-    <section class = "center">
-        <h1>STOP WAITING!</h1>
-    </section>
-    <section>
-        <input type="text" value="enter zip">
-        <input type="text" value="time-slot">
-        <button class="button button1">get started</button>
-    </section>
-    <section class = "right">
-        <div class="popup" onclick="myFunction()">or search by garage
-            <span class="popuptext" id="searchByGrage">no function yet</span>
-        </div>
-        <script>
-            // When the user clicks on div, open the popup
-            function myFunction() {
-              var popup = document.getElementById("searchByGrage");
-              popup.classList.toggle("show");
-            }
-            </script>
-    </section>
-    <section>
-        <ul>
-            <li>
-                <a class = "a a2" href="fastestsolution.html">
-                    <strong>FASTEST SOLUTION</strong>
-                </a>
-            </li>
-            <li>
-                <a class = "a a2" href="null.html">
-                    <strong>NULL</strong>
-                </a>
-            </li>
-            <li>
-                <a class = "a a2" href="service.html">
-                    <strong>SERVICE</strong>
-                </a>
-            </li>
-        </ul>
-    </section>
-    <footer class = "right">
+<nav>
+    <ul>
+        <li class="right">
+            <button class="button button2">
+                <a class="a a1" href="sign.html">Sign in</a>
+            </button>
+        </li>
+        <li class="right right1">
+            <button class="button button2">
+                <a class="a a1" href="register.html">Register</a>
+            </button>
+        </li>
+    </ul>
+</nav>
+<nav>
+    <ul>
         <li>
-            <a class = "a a1" href="support.html">Support</a>
+            <a class="a a1" href="home.html">HOME</a>
         </li>
         <li>
-            <a class = "a a1" href="addgarage.html">Add your garage</a>   
+            <a class="a a1" href="gragelist.html">GARAGE LIST</a>
         </li>
-    </footer>
+        <li>
+            <a class="a a1" href="reserveAspot.html">RESERVE A SPOT</a>
+        </li>
+        <li>
+            <a class="a a1" href="managebooking.html">MANAGE BOOKING</a>
+        </li>
+    </ul>
+</nav>
+<section>
+    <label>
+        <input type="text" placeholder="Enter Zip Code....">
+    </label>
+    <!-- <input type="text" placeholder="Time-Slot"> -->
+    <label for="cars">Choose a car:</label>
+    <select name="cars" id="cars">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="opel">Opel</option>
+        <option value="audi">Audi</option>
+    </select>
+    <button class="button button1">get started</button>
+</section>
+<section class="right">
+    <div class="popup" onclick="myFunction()">or search by garage
+        <span class="popuptext" id="searchByGrage">no function yet</span>
+    </div>
+    <script>
+        // When the user clicks on div, open the popup
+        function myFunction() {
+            var popup = document.getElementById("searchByGrage");
+            popup.classList.toggle("show");
+        }
+    </script>
+</section>
+<section>
+    <ul>
+        <li>
+            <a class="a a2" href="fastestsolution.html">
+                <strong>FASTEST SOLUTION</strong>
+            </a>
+        </li>
+        <li>
+            <a class="a a2" href="null.html">
+                <strong>GREAT PRICING</strong>
+            </a>
+        </li>
+        <li>
+            <a class="a a2" href="service.html">
+                <strong>BEST SERVICE</strong>
+            </a>
+        </li>
+    </ul>
+</section>
+<footer class="right">
+    <li>
+        <a class="a a1" href="support.html">Support</a>
+    </li>
+    <li>
+        <a class="a a1" href="addgarage.html">Add your garage</a>
+    </li>
+</footer>
 </body>
 </html>
