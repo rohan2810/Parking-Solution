@@ -21,20 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6b375c79-32f0-45f6-bbc7-a2c69361aba9" name="Default Changelist" comment="refactoring and updated landing page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parking-Solution/src/UI-Component/addgarage.html" beforeDir="false" afterPath="$PROJECT_DIR$/Parking-Solution/src/UI-Component/addgarage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parking-Solution/src/UI-Component/fastestsolution.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parking-Solution/src/UI-Component/gragelist.html" beforeDir="false" afterPath="$PROJECT_DIR$/Parking-Solution/src/UI-Component/gragelist.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parking-Solution/src/UI-Component/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/Parking-Solution/src/UI-Component/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Parking-Solution/src/UI-Component/homestyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/Parking-Solution/src/UI-Component/homestyles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parking-Solution/src/UI-Component/managebooking.html" beforeDir="false" afterPath="$PROJECT_DIR$/Parking-Solution/src/UI-Component/managebooking.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parking-Solution/src/UI-Component/null.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parking-Solution/src/UI-Component/popup.css" beforeDir="false" afterPath="$PROJECT_DIR$/Parking-Solution/src/UI-Component/popup.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parking-Solution/src/UI-Component/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/Parking-Solution/src/UI-Component/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parking-Solution/src/UI-Component/reserveAspot.html" beforeDir="false" afterPath="$PROJECT_DIR$/Parking-Solution/src/UI-Component/reserveAspot.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parking-Solution/src/UI-Component/service.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parking-Solution/src/UI-Component/sign.html" beforeDir="false" afterPath="$PROJECT_DIR$/Parking-Solution/src/UI-Component/sign.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parking-Solution/src/UI-Component/support.html" beforeDir="false" afterPath="$PROJECT_DIR$/Parking-Solution/src/UI-Component/support.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parking-Solution/src/UI-Component/textbox.css" beforeDir="false" afterPath="$PROJECT_DIR$/Parking-Solution/src/UI-Component/textbox.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +87,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604288774618</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="refactoring and updated landing page">
+      <created>1604303355957</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1604303355957</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,10 +134,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="571" y="371" key="VCS.ChangelistChooser/0.0.1440.900@0.0.1440.900" timestamp="1603784175326" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1604288779312">
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1604303359952">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1604288779312" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1604303359952" />
     <state x="88" y="72" key="new project wizard" timestamp="1603784042685">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

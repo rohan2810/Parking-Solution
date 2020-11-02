@@ -2,7 +2,7 @@ body {
     margin: 0;
     font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
     color: rgb(255, 255, 255);
-    background: rgb(59, 59, 59) url("homepage2.jpg") no-repeat fixed;
+    background: rgb(59, 59, 59) url("lp.jpg") no-repeat fixed;
     background-size: cover;
     overflow-x: hidden;
 }
@@ -74,7 +74,7 @@ header::after {
 }
 
 .button {
-    background-color: #4caf50; /* Green */
+    background-color: Green; /* Green */
     border: none;
     color: white;
     padding: 10px;
