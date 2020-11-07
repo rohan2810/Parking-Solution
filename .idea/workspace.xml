@@ -20,8 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b375c79-32f0-45f6-bbc7-a2c69361aba9" name="Default Changelist" comment="refactoring and updated landing page">
+      <change afterPath="$PROJECT_DIR$/Parking-Solution/sql_files/ParkingSolution-schema.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parking-Solution/src/UI-Component/homestyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/Parking-Solution/src/UI-Component/homestyles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +79,8 @@
       <option name="presentableId" value="Default" />
       <updated>1603783768198</updated>
       <workItem from="1603783779369" duration="490000" />
+      <workItem from="1604613289214" duration="356000" />
+      <workItem from="1604708978430" duration="537000" />
     </task>
     <task id="LOCAL-00001" summary="landing page">
       <created>1604288774618</created>
@@ -122,14 +124,22 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="208" y="31" key="#Project_Structure/0.0.1440.900@0.0.1440.900" timestamp="1603784270730" />
+    <state x="560" y="205" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604709174252">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="560" y="205" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.104.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1604709174252" />
     <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1604299789082">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1604299789082" />
-    <state x="419" y="177" key="RollbackChangesDialog" timestamp="1603784168824">
+    <state x="151" y="97" key="DiffContextDialog" timestamp="1604335192797">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="419" y="177" key="RollbackChangesDialog/0.0.1440.900@0.0.1440.900" timestamp="1603784168824" />
+    <state x="151" y="97" key="DiffContextDialog/0.0.1440.900@0.0.1440.900" timestamp="1604335192797" />
+    <state x="419" y="177" key="RollbackChangesDialog" timestamp="1604335194656">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="419" y="177" key="RollbackChangesDialog/0.0.1440.900@0.0.1440.900" timestamp="1604335194656" />
     <state x="571" y="371" key="VCS.ChangelistChooser" timestamp="1603784175326">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
