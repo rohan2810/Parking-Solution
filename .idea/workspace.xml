@@ -19,7 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b375c79-32f0-45f6-bbc7-a2c69361aba9" name="Default Changelist" comment="db schema initial commit">
+    <list default="true" id="6b375c79-32f0-45f6-bbc7-a2c69361aba9" name="Default Changelist" comment="db schema final changes">
+      <change afterPath="$PROJECT_DIR$/Parking-Solution/sql_files/ParkingSolution-data.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Parking-Solution/sql_files/ParkingSolution-schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Parking-Solution/sql_files/ParkingSolution-schema.sql" afterDir="false" />
     </list>
@@ -82,7 +83,7 @@
       <updated>1603783768198</updated>
       <workItem from="1603783779369" duration="490000" />
       <workItem from="1604613289214" duration="356000" />
-      <workItem from="1604708978430" duration="1397000" />
+      <workItem from="1604708978430" duration="7427000" />
     </task>
     <task id="LOCAL-00001" summary="landing page">
       <created>1604288774618</created>
@@ -105,7 +106,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604712507257</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="db schema final changes">
+      <created>1604713789042</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1604713789043</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -127,7 +135,8 @@
     <MESSAGE value="landing page" />
     <MESSAGE value="refactoring and updated landing page" />
     <MESSAGE value="db schema initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="db schema initial commit" />
+    <MESSAGE value="db schema final changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="db schema final changes" />
   </component>
   <component name="WindowStateProjectService">
     <state x="208" y="31" key="#Project_Structure" timestamp="1603784270730">
@@ -146,6 +155,22 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="151" y="97" key="DiffContextDialog/0.0.1440.900@0.0.1440.900" timestamp="1604335192797" />
+    <state width="1294" height="305" key="GridCell.Tab.0.bottom" timestamp="1604717316580">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1294" height="305" key="GridCell.Tab.0.bottom/1920.104.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1604717316580" />
+    <state width="1294" height="305" key="GridCell.Tab.0.center" timestamp="1604717316579">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1294" height="305" key="GridCell.Tab.0.center/1920.104.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1604717316579" />
+    <state width="1294" height="305" key="GridCell.Tab.0.left" timestamp="1604717316578">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1294" height="305" key="GridCell.Tab.0.left/1920.104.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1604717316578" />
+    <state width="1294" height="305" key="GridCell.Tab.0.right" timestamp="1604717316579">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1294" height="305" key="GridCell.Tab.0.right/1920.104.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1604717316579" />
     <state x="419" y="177" key="RollbackChangesDialog" timestamp="1604335194656">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -154,11 +179,11 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="571" y="371" key="VCS.ChangelistChooser/0.0.1440.900@0.0.1440.900" timestamp="1603784175326" />
-    <state x="427" y="228" key="Vcs.Push.Dialog.v2" timestamp="1604712539246">
+    <state x="427" y="228" key="Vcs.Push.Dialog.v2" timestamp="1604713790254">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1604303359952" />
-    <state x="427" y="228" key="Vcs.Push.Dialog.v2/1920.104.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1604712539246" />
+    <state x="427" y="228" key="Vcs.Push.Dialog.v2/1920.104.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1604713790254" />
     <state x="88" y="72" key="new project wizard" timestamp="1603784042685">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

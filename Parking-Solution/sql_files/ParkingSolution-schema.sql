@@ -45,19 +45,19 @@ CREATE TABLE parkingsolution.Owner
 CREATE TABLE ParkingSolution.Operator
 (
     Operator_Id  INT         NOT NULL AUTO_INCREMENT,
-    Garage_Id    INT         NOT NULL,
-    Name         VARCHAR(45) NOT NULL,
     Username     VARCHAR(45) NOT NULL UNIQUE,
-    Password     VARCHAR(45) NOT NULL,
-    Salary       VARCHAR(45) NOT NULL,
+    Name         VARCHAR(45) NOT NULL,
     Phone_number VARCHAR(10) NOT NULL,
+    Password     VARCHAR(45) NOT NULL,
+    Garage_Id    INT         NOT NULL,
+    Salary       VARCHAR(45) NOT NULL,
     PRIMARY KEY (Operator_Id),
     UNIQUE INDEX Garage_Id_UNIQUE (Garage_Id ASC) VISIBLE,
     CONSTRAINT fk_garage_id1
         FOREIGN KEY (Garage_Id)
             REFERENCES ParkingSolution.Garage (Garage_Id)
             ON DELETE RESTRICT
-            ON UPDATE CASCADE
+            ON UPDATE NO ACTION
 );
 
 
@@ -67,7 +67,7 @@ CREATE TABLE parkingsolution.Floor
     Total_booked    INT NULL,
     Total_spots     INT NULL,
     Total_Available INT GENERATED ALWAYS AS (Total_spots - Total_booked) COMMENT 'All spots - Booked Spots',
-    Garage_Id       INT NOT NULL UNIQUE,
+    Garage_Id       INT NOT NULL,
     PRIMARY KEY (Floor_Id, Garage_Id),
     CONSTRAINT fk_garage_id_floor
         FOREIGN KEY (Garage_Id)
@@ -79,11 +79,11 @@ CREATE TABLE parkingsolution.Floor
 
 CREATE TABLE parkingsolution.Spot
 (
-    Garage_Id   INT                                                     NOT NULL,
-    Floor_Id    INT                                                     NOT NULL,
-    Spot_Id     INT                                                     NOT NULL,
-    Open        TINYINT                                                 NULL,
-    Duration_Id ENUM ('0.5', '1', '2', '3', '6', '9', '12', '16', '24') NOT NULL,
+    Garage_Id   INT     NOT NULL,
+    Floor_Id    INT     NOT NULL,
+    Spot_Id     INT     NOT NULL,
+    Open        TINYINT NOT NULL,
+    Duration_Id ENUM ('0.5', '1', '2', '3', '6', '9', '12', '16', '24'),
     PRIMARY KEY (Garage_Id, Floor_Id, Spot_Id),
     CONSTRAINT fk_garage_id_4
         FOREIGN KEY (Garage_Id)
@@ -180,8 +180,4 @@ CREATE TABLE parkingsolution.Works_For
             ON DELETE CASCADE
             ON UPDATE CASCADE
 );
-
-
-
-
 
