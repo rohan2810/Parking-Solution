@@ -19,9 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b375c79-32f0-45f6-bbc7-a2c69361aba9" name="Default Changelist" comment="refactoring and updated landing page">
-      <change afterPath="$PROJECT_DIR$/Parking-Solution/sql_files/ParkingSolution-schema.sql" afterDir="false" />
+    <list default="true" id="6b375c79-32f0-45f6-bbc7-a2c69361aba9" name="Default Changelist" comment="db schema initial commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Parking-Solution/sql_files/ParkingSolution-schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Parking-Solution/sql_files/ParkingSolution-schema.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +48,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -58,6 +59,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -80,7 +82,7 @@
       <updated>1603783768198</updated>
       <workItem from="1603783779369" duration="490000" />
       <workItem from="1604613289214" duration="356000" />
-      <workItem from="1604708978430" duration="537000" />
+      <workItem from="1604708978430" duration="1397000" />
     </task>
     <task id="LOCAL-00001" summary="landing page">
       <created>1604288774618</created>
@@ -96,7 +98,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604303355957</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="db schema initial commit">
+      <created>1604712507257</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1604712507257</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -117,17 +126,18 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="landing page" />
     <MESSAGE value="refactoring and updated landing page" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactoring and updated landing page" />
+    <MESSAGE value="db schema initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="db schema initial commit" />
   </component>
   <component name="WindowStateProjectService">
     <state x="208" y="31" key="#Project_Structure" timestamp="1603784270730">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="208" y="31" key="#Project_Structure/0.0.1440.900@0.0.1440.900" timestamp="1603784270730" />
-    <state x="560" y="205" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604709174252">
+    <state x="560" y="205" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604713456066">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="560" y="205" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.104.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1604709174252" />
+    <state x="560" y="205" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.104.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1604713456066" />
     <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1604299789082">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -144,10 +154,11 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="571" y="371" key="VCS.ChangelistChooser/0.0.1440.900@0.0.1440.900" timestamp="1603784175326" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1604303359952">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="427" y="228" key="Vcs.Push.Dialog.v2" timestamp="1604712539246">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1604303359952" />
+    <state x="427" y="228" key="Vcs.Push.Dialog.v2/1920.104.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1604712539246" />
     <state x="88" y="72" key="new project wizard" timestamp="1603784042685">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
