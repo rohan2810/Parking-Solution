@@ -20,7 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b375c79-32f0-45f6-bbc7-a2c69361aba9" name="Default Changelist" comment="db schema final changes">
-      <change afterPath="$PROJECT_DIR$/Parking-Solution/sql_files/ParkingSolution-data.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Parking-Solution/sql_files/ParkingSolution-schema1.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Parking-Solution/sql_files/ParkingSolution-schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Parking-Solution/sql_files/ParkingSolution-schema.sql" afterDir="false" />
     </list>
@@ -39,6 +39,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
@@ -83,7 +84,9 @@
       <updated>1603783768198</updated>
       <workItem from="1603783779369" duration="490000" />
       <workItem from="1604613289214" duration="356000" />
-      <workItem from="1604708978430" duration="7427000" />
+      <workItem from="1604708978430" duration="7490000" />
+      <workItem from="1604736983037" duration="15000" />
+      <workItem from="1604790609359" duration="2690000" />
     </task>
     <task id="LOCAL-00001" summary="landing page">
       <created>1604288774618</created>
@@ -113,7 +116,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604713789043</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="db schema final changes">
+      <created>1604736866463</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1604736866463</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -171,6 +181,14 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1294" height="305" key="GridCell.Tab.0.right/1920.104.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1604717316579" />
+    <state x="144" y="79" key="MergeDialog" timestamp="1604736905231">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="144" y="79" key="MergeDialog/0.0.1440.900@0.0.1440.900" timestamp="1604736905231" />
+    <state x="358" y="218" key="MultipleFileMergeDialog" timestamp="1604736905260">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="358" y="218" key="MultipleFileMergeDialog/0.0.1440.900@0.0.1440.900" timestamp="1604736905259" />
     <state x="419" y="177" key="RollbackChangesDialog" timestamp="1604335194656">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -179,10 +197,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="571" y="371" key="VCS.ChangelistChooser/0.0.1440.900@0.0.1440.900" timestamp="1603784175326" />
-    <state x="427" y="228" key="Vcs.Push.Dialog.v2" timestamp="1604713790254">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1604736989195">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1604303359952" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1604736989195" />
     <state x="427" y="228" key="Vcs.Push.Dialog.v2/1920.104.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1604713790254" />
     <state x="88" y="72" key="new project wizard" timestamp="1603784042685">
       <screen x="0" y="0" width="1440" height="900" />
