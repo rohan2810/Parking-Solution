@@ -6,7 +6,7 @@
 </head>
 <body>
 <div align="center">
-    <h1>Employee Register Form</h1>
+    <h1>User Register Form</h1>
     <form action="<%= request.getContextPath() %>/registerCustomer" method="post">
         <table style="with: 80%">
             <tr>
