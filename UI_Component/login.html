@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Login</title>
-        <link rel="stylesheet" href="login.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>         
-        <div class="sign_up">
-            <form method="POST" id="login" action="connect.php">
-                <h2>Login</h1>                   
-                <label> E-mail: </label>
-                    <input type="email" name="email"  placeholder="Enter your email"><br><br>
-                
-                <label> Password : </label>
-                    <input type="password" name="password"  placeholder="Enter your new password"><br><br>
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="sign_up">
+    <form method="post" id="login" action="<%=request.getContextPath()%>/login">
+        <h1>Login</h1>
+        <label> E-mail: </label>
+        <label>
+            <input type="email" name="email" placeholder="Enter your email">
+        </label><br><br>
 
-                <input type="submit" class="button" name="submit" value = "Sign in">
-             </form>
-        </div>
+        <label> Password : </label>
+        <label>
+            <input type="password" name="password" placeholder="Enter your new password">
+        </label><br><br>
+
+        <input type="submit" class="button" name="submit" value="Sign in">
+    </form>
+</div>
 </body>
 </html>
