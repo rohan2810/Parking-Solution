@@ -10,7 +10,7 @@ USE parkingsolution;
 
 CREATE TABLE parkingsolution.User
 (
-    Id           INT         NOT NULL,
+    Id           INT         NOT NULL AUTO_INCREMENT,
     Username     VARCHAR(45) NOT NULL,
     Email        VARCHAR(45) NOT NULL,
     Name         VARCHAR(45) NOT NULL,
@@ -23,7 +23,7 @@ CREATE TABLE parkingsolution.User
 
 CREATE TABLE parkingsolution.Garage
 (
-    Garage_Id     INT          NOT NULL,
+    Garage_Id     INT          NOT NULL AUTO_INCREMENT,
     Zip           VARCHAR(5)   NOT NULL,
     Set_Cost      INT          NOT NULL,
     Garage_Name   VARCHAR(100) NOT NULL,
@@ -54,12 +54,10 @@ CREATE TABLE parkingsolution.Operator
 
 CREATE TABLE parkingsolution.Customer
 (
-    User_Id        INT         NOT NULL,
-    Booking_Id     INT         NOT NULL,
-    Customer_Code  VARCHAR(45) NOT NULL,
-    Total_Bookings INT         NULL,
-    PRIMARY KEY (User_Id, Booking_Id),
-    UNIQUE INDEX Customer_Code_UNIQUE (Customer_Code ASC) VISIBLE
+    User_Id        INT NOT NULL,
+    Booking_Id     INT NOT NULL,
+    Total_Bookings INT NULL,
+    PRIMARY KEY (User_Id, Booking_Id)
 );
 
 
