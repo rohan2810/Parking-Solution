@@ -1,16 +1,14 @@
 package servlets;
 
-import java.io.IOException;
+import dao.LoginUserDao;
+import model.User;
 
-import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-
-import dao.LoginUserDao;
-import model.User;
+import java.io.IOException;
 
 @WebServlet("/login")
 public class LoginServlet extends HttpServlet {
@@ -18,19 +16,26 @@ public class LoginServlet extends HttpServlet {
     private LoginUserDao loginUserDao;
 
     public void init() {
-    	loginUserDao = new LoginUserDao();
+        loginUserDao = new LoginUserDao();
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
-    throws ServletException, IOException {
+            throws IOException {
 
         String username = request.getParameter("username");
         String password = request.getParameter("password");
-        User user = new User(username,password);
+        User user = new User(username, password);
 
         try {
             if (loginUserDao.validate(user)) {
-                response.sendRedirect("loginsuccess.jsp");
+                String userType = loginUserDao.getLoginType(user);
+                if (userType.equals("Owner")) {
+                    response.sendRedirect("ownerDashboard.jsp");
+                } else if (userType.equals("Operator")) {
+                    response.sendRedirect("operatorDashboard.jsp");
+                } else {
+                    response.sendRedirect("customerDashboard.jsp");
+                }
             } else {
                 HttpSession session = request.getSession();
             }

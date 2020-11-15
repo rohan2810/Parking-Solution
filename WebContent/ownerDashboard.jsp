@@ -6,7 +6,7 @@
 </head>
 <body>
 	<div align="center">
-		<h1>You have hello successfully</h1>
+		<h1>/Owner Dashboard</h1>
 	</div>
 </body>
 </html>
