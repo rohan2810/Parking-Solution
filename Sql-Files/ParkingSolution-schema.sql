@@ -31,7 +31,7 @@ CREATE TABLE parkingsolution.Garage
     Number_Floors INT          NOT NULL,
     Number_Spots  INT          NOT NULL,
     PRIMARY KEY (Garage_Id),
-	UNIQUE INDEX Name_UNIQUE (Garage_Name ASC) VISIBLE,
+	UNIQUE INDEX Name_UNIQUE (Garage_Name ASC) VISIBLE
 );
 
 CREATE TABLE parkingsolution.Owner
