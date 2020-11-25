@@ -25,70 +25,65 @@
 
 <div class="userInput">
     <form>
-        <label>
-            <input placeholder="Enter Zip Code...." type="text">
+        <label> <input placeholder="Enter Zip Code...." type="text">
         </label>
         <!--
-        <select name="time" id="time">
-            <option value="volvo">Select Duration</option>
-            <option value="saab">1 hour</option>
-            <option value="opel">2 hour</option>
-            <option value="audi">4 hour</option>
-            <option value="saab">6 hour</option>
-            <option value="opel">8 hour</option>
-            <option value="audi">12 hour</option>
-        </select> 
-        -->
-        <button class="button button1", type = "submit" formaction ="get_started.html">
-                get started
+    <select name="time" id="time">
+        <option value="volvo">Select Duration</option>
+        <option value="saab">1 hour</option>
+        <option value="opel">2 hour</option>
+        <option value="audi">4 hour</option>
+        <option value="saab">6 hour</option>
+        <option value="opel">8 hour</option>
+        <option value="audi">12 hour</option>
+    </select> 
+    -->
+        <button class="button button1" , type="submit"
+                formaction="get_started.html">get started
         </button>
     </form>
 </div>
 
 <section class="right">
     <!--
-    <div class="popup" onclick="myFunction()">
-        <a href="#">or search by garage</a>
-        <span class="popuptext" id="searchByGrage">no function yet</span>
-    </div>
-    <script>
-        // When the user clicks on div, open the popup
-        function myFunction() {
-            var popup = document.getElementById("searchByGrage");
-            popup.classList.toggle("show");
-        }
-    </script>
-    -->
+<div class="popup" onclick="myFunction()">
+    <a href="#">or search by garage</a>
+    <span class="popuptext" id="searchByGrage">no function yet</span>
+</div>
+<script>
+    // When the user clicks on div, open the popup
+    function myFunction() {
+        var popup = document.getElementById("searchByGrage");
+        popup.classList.toggle("show");
+    }
+</script>
+-->
     <div>
         <form method="POST" id="searchByGrage" action="searchbygrage.jsp">
-            <input type="submit" class="button button2" name="searchByGrage" value = "or search by garage">
-         </form>
-    </div>   
-</section>
-<section class="description">
-    <div class="desciption-div">
-        <ul>
-            <li>
-                <strong>FASTEST SOLUTION</strong>
-            </li>
-            <li>
-                <strong>GREAT PRICING</strong>
-            </li>
-            <li>
-                <strong>BEST SERVICE</strong>
-            </li>
-        </ul>
+            <input type="submit" class="button button2" name="searchByGrage"
+                   value="or search by garage">
+        </form>
     </div>
 </section>
+<!-- <section class="description">
+<div class="desciption-div">
+    <ul>
+        
+    </ul>
+</div>
+</section> -->
 <div class="footer">
-    <li>
-        <a class="a a1" href="support.html">
-            <strong>Support</strong></a>
-    </li>
-    <li>
-        <a class="a a1" href="manageGarage.html">
-            <strong>Manage Your Garage</strong></a>
-    </li>
+    <div class="leftFooter">
+        <li>FASTEST SOLUTION</li>
+        <li>GREAT PRICING</li>
+        <li>BEST SERVICE</li>
+    </div>
+    <div class="rightFooter">
+        <li><a class="a a1" href="support.html"> <strong>Support</strong></a>
+        </li>
+        <li><a class="a a1" href="manageGarage.html"> <strong>Manage
+            Your Garage</strong></a></li>
+    </div>
 </div>
 </body>
 </html>
