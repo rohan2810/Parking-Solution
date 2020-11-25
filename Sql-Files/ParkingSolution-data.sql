@@ -230,4 +230,3 @@ values (1, 1, now(), now(), 67, 0, true),
        (16, 16, now(), now(), 34, 0, true),
        (17, 17, now(), now(), 45, 2, true),
        (18, 18, now(), now(), 49, 0, true);
-
