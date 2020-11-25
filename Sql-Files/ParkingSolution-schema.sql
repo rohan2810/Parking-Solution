@@ -31,7 +31,7 @@ CREATE TABLE parkingsolution.Garage
     Number_Floors INT          NOT NULL,
     Number_Spots  INT          NOT NULL,
     PRIMARY KEY (Garage_Id),
-	UNIQUE INDEX Name_UNIQUE (Garage_Name ASC) VISIBLE
+    UNIQUE INDEX Name_UNIQUE (Garage_Name ASC) VISIBLE
 );
 
 CREATE TABLE parkingsolution.Owner
@@ -136,6 +136,17 @@ CREATE TABLE parkingsolution.Parking_Slip
             REFERENCES parkingsolution.Booking (Booking_Id)
             ON DELETE CASCADE
             ON UPDATE CASCADE
+);
+
+CREATE TABLE `parkingsolution`.`Car`
+(
+    `Car_Id`       INT         NOT NULL AUTO_INCREMENT,
+    `Color`        VARCHAR(45) NULL,
+    `Model`        VARCHAR(45) NULL,
+    `Number_Plate` VARCHAR(7)  NOT NULL,
+    `User_Id`      INT         NOT NULL,
+    PRIMARY KEY (`Car_Id`),
+    UNIQUE INDEX `Number_Plate_UNIQUE` (`Number_Plate` ASC) VISIBLE
 );
 
 

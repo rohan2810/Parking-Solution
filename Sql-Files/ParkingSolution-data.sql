@@ -203,3 +203,20 @@ values (1, 1, now(), now(), 67, 0, true),
        (16, 16, now(), now(), 34, 0, true),
        (17, 17, now(), now(), 45, 2, true),
        (18, 18, now(), now(), 49, 0, true);
+
+insert into Car (Car_Id, Color, Model, Number_Plate, User_Id)
+values (1, 'Pink', 'Accord', 's0IH0Bq', 1),
+       (2, 'Fuscia', 'XC70', 'u3hl82X', 2),
+       (3, 'Mauv', 'Navigator L', 'o65rj8H', 3),
+       (4, 'Red', 'Highlander', 'bgtGe3Y', 4),
+       (5, 'Fuscia', 'Forenza', '4qz8Kb1', 5),
+       (6, 'Puce', 'Accord', 'kHqGKQR', 6),
+       (7, 'Orange', 'Camry', 'HbRHhdj', 7),
+       (8, 'Crimson', 'Neon', 'Byv34oq', 8),
+       (9, 'Crimson', 'Land Cruiser', 'F9ZpJM5', 9),
+       (10, 'Purple', 'XC70', 'wsrLEtG', 10),
+       (11, 'Fuscia', 'Impreza', 'P9JVq0g', 11),
+       (12, 'Turquoise', 'LeSabre', '4ds8upe', 12),
+       (13, 'Mauv', 'Capri', 'jJlw9y0', 13),
+       (14, 'Purple', 'LHS', '4FVrttU', 14),
+       (15, 'Pink', 'Yukon', 'MuZratt', 15);
