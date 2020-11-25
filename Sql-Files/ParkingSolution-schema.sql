@@ -31,7 +31,7 @@ CREATE TABLE parkingsolution.Garage
     Number_Floors INT          NOT NULL,
     Number_Spots  INT          NOT NULL,
     PRIMARY KEY (Garage_Id),
-	UNIQUE INDEX Name_UNIQUE (Garage_Name ASC) VISIBLE
+    UNIQUE INDEX Name_UNIQUE (Garage_Name ASC) VISIBLE
 );
 
 CREATE TABLE parkingsolution.Owner
@@ -96,26 +96,42 @@ CREATE TABLE parkingsolution.Spot
             ON DELETE CASCADE
             ON UPDATE CASCADE
 );
+CREATE TABLE `parkingsolution`.`Car`
+(
+    `Car_Id`       INT         NOT NULL AUTO_INCREMENT,
+    `Color`        VARCHAR(45) NULL,
+    `Model`        VARCHAR(45) NULL,
+    `Number_Plate` VARCHAR(7)  NOT NULL,
+    `User_Id`      INT         NOT NULL,
+    PRIMARY KEY (`Car_Id`),
+    UNIQUE INDEX `Number_Plate_UNIQUE` (`Number_Plate` ASC) VISIBLE
+);
 
 CREATE TABLE parkingsolution.Booking
 (
-    Booking_Id   INT         NOT NULL AUTO_INCREMENT,
-    User_Id      INT         NOT NULL,
-    Spot         INT         NOT NULL COMMENT 'GarageId+FloorId+SpotId',
-    Code         VARCHAR(6)  NOT NULL,
-    Start_Time   DATETIME    NOT NULL,
-    End_Time     DATETIME    NOT NULL,
-    Car_no_plate VARCHAR(45) NOT NULL,
-    Cost         INT         NOT NULL,
-    Booking_Time DATETIME    NOT NULL DEFAULT now() ON UPDATE now(),
+    Booking_Id   INT        NOT NULL AUTO_INCREMENT,
+    User_Id      INT        NOT NULL,
+    Car_Id       INT        NOT NULL,
+    Spot         INT        NOT NULL COMMENT 'GarageId+FloorId+SpotId',
+    Code         VARCHAR(6) NOT NULL,
+    Start_Time   DATETIME   NOT NULL,
+    End_Time     DATETIME   NOT NULL,
+    Cost         INT        NOT NULL,
+    Booking_Time DATETIME   NOT NULL DEFAULT now() ON UPDATE now(),
     PRIMARY KEY (Booking_Id),
     UNIQUE INDEX Code_UNIQUE (Code ASC) VISIBLE,
     INDEX fk_booking_user_idx (User_Id ASC) VISIBLE,
+    INDEX Car_Id_UNIQUE (Car_Id ASC) VISIBLE,
     CONSTRAINT fk_booking_user
         FOREIGN KEY (User_Id)
             REFERENCES parkingsolution.User (Id)
             ON DELETE CASCADE
-            ON UPDATE CASCADE
+            ON UPDATE CASCADE,
+    CONSTRAINT fk_booking_car
+        FOREIGN KEY (Car_Id)
+            REFERENCES parkingsolution.Car (Car_Id)
+            ON DELETE NO ACTION
+            ON UPDATE NO ACTION
 );
 
 CREATE TABLE parkingsolution.Parking_Slip
@@ -137,5 +153,3 @@ CREATE TABLE parkingsolution.Parking_Slip
             ON DELETE CASCADE
             ON UPDATE CASCADE
 );
-
-
