@@ -153,3 +153,5 @@ CREATE TABLE parkingsolution.Parking_Slip
             ON DELETE CASCADE
             ON UPDATE CASCADE
 );
+
+
