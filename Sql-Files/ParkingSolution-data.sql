@@ -53,21 +53,21 @@ values (1, 'rwhittlesey0', 'rwhittlesey0@cargocollective.com', 'Roley Whittlesey
        (50, 'hgersam1d', 'hgersam1d@instagram.com', 'Hamel Gersam', 'mNEinJUlYFhq', '1471514726');
 insert
 into Garage (Garage_Id, Zip, Set_cost, Garage_Name, Address, Number_Floors, Number_Spots)
-values (1, '73157', 34, 'Kautzer, Crooks and Kilback', '587 Hoard Place', 4, 47),
-       (2, '41698', 47, 'Pfeffer, Paucek and Shanahan', '7743 Debs Junction', 2, 8),
-       (3, '46142', 34, 'Feest, Schultz and Gottlieb', '9538 Meadow Valley Center', 1, 14),
-       (4, '28220', 21, 'Wilkinson-Kiehn', '768 Sutteridge Pass', 3, 18),
-       (5, '48511', 16, 'Ratke, Gutkowski and Mills', '04 Forest Terrace', 5, 35),
-       (6, '50975', 39, 'Bahringer-Hand', '20937 Haas Alley', 2, 12),
-       (7, '32037', 23, 'Keeling Group', '8923 Oneill Road', 1, 35),
-       (8, '34983', 35, 'Ernser-Padberg', '05 Buhler Road', 4, 29),
-       (9, '73676', 15, 'Pouros-Shanahan', '6318 Claremont Road', 4, 50),
-       (10, '22613', 14, 'Lynch, Kuphal and VonRueden', '137 Almo Point', 1, 39),
-       (11, '96157', 23, 'Ziemann-Wyman', '08228 Fallview Hill', 5, 48),
-       (12, '29407', 39, 'Lynch Group', '89 Claremont Plaza', 4, 32),
-       (13, '56434', 14, 'Gislason Inc', '97528 Logan Parkway', 4, 43),
-       (14, '51997', 26, 'Armstrong, Bechtelar and Goodwin', '4 Roxbury Pass', 1, 19),
-       (15, '68309', 11, 'Ledner-Hahn', '203 Del Mar Junction', 1, 13);
+values (1, '41698', 34, 'Kautzer, Crooks and Kilback', '587 Hoard Place', 4, 47),
+       (2, '41697', 47, 'Pfeffer, Paucek and Shanahan', '7743 Debs Junction', 2, 8),
+       (3, '41696', 34, 'Feest, Schultz and Gottlieb', '9538 Meadow Valley Center', 1, 14),
+       (4, '41695', 21, 'Wilkinson-Kiehn', '768 Sutteridge Pass', 3, 18),
+       (5, '41689', 16, 'Ratke, Gutkowski and Mills', '04 Forest Terrace', 5, 35),
+       (6, '45698', 39, 'Bahringer-Hand', '20937 Haas Alley', 2, 12),
+       (7, '51698', 23, 'Keeling Group', '8923 Oneill Road', 1, 35),
+       (8, '96698', 35, 'Ernser-Padberg', '05 Buhler Road', 4, 29),
+       (9, '41690', 15, 'Pouros-Shanahan', '6318 Claremont Road', 4, 50),
+       (10, '41691', 14, 'Lynch, Kuphal and VonRueden', '137 Almo Point', 1, 39),
+       (11, '41692', 23, 'Ziemann-Wyman', '08228 Fallview Hill', 5, 48),
+       (12, '41693', 39, 'Lynch Group', '89 Claremont Plaza', 4, 32),
+       (13, '41190', 14, 'Gislason Inc', '97528 Logan Parkway', 4, 43),
+       (14, '41123', 26, 'Armstrong, Bechtelar and Goodwin', '4 Roxbury Pass', 1, 19),
+       (15, '41688', 11, 'Ledner-Hahn', '203 Del Mar Junction', 1, 13);
 
 insert into Owner (Garage_Id, User_Id, Owner_Code)
 values (1, 1, '012345'),

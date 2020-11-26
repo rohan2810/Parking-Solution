@@ -8,8 +8,8 @@ public class Util {
         String getUserId = "SELECT Id from parkingsolution.User where Username = ?";
 
         int id = 0;
-        Class.forName("com.mysql.jdbc.Driver");
-        try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/parkingsolution", "root", "root")) {
+
+        try (Connection connection = Util.getConnection()) {
 
             PreparedStatement preparedStatement1 = connection.prepareStatement(getUserId);
             preparedStatement1.setString(1, username);
@@ -28,8 +28,8 @@ public class Util {
         String getGarageId = "SELECT Garage_Id from parkingsolution.Garage where Garage_Name = ?";
 
         int id = 0;
-        Class.forName("com.mysql.jdbc.Driver");
-        try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/parkingsolution", "root", "root")) {
+
+        try (Connection connection = Util.getConnection()) {
 
             PreparedStatement preparedStatement1 = connection.prepareStatement(getGarageId);
             preparedStatement1.setString(1, garageName);
@@ -59,5 +59,22 @@ public class Util {
             }
         }
     }
+
+    public static Connection getConnection() {
+        String user = "root";
+        String password = "root";
+        Connection con = null;
+
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/parkingsolution", user, password);
+
+        } catch (Exception e) {
+            assert e instanceof SQLException;
+            Util.printSQLException((SQLException) e);
+        }
+        return con;
+    }
+
 
 }
