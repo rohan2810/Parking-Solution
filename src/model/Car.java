@@ -2,51 +2,38 @@ package model;
 
 public class Car {
 
-    public String carId;
-    public String numberPlate;
-    public String Color;
-    public String Model;
-    public User user;
+	public String numberPlate;
+	public String color;
+	public String model;
 
-    public Car(String carId, String numberPlate, String Color, String Model, User user) {
-        this.carId = carId;
-        this.numberPlate = numberPlate;
-        this.Color = Color;
-        this.Model = Model;
-        this.user = user;
-    }
+	public Car(String numberPlate, String color, String model) {
+		this.numberPlate = numberPlate;
+		this.color = color;
+		this.model = model;
+	}
 
-//    public String getCar_Id() {
-//        return carId;
-//    }
-//
-//    public void setCar_Id(String carId) {
-//        this.carId = carId;
-//    }
+	public String getNumberPlate() {
+		return numberPlate;
+	}
 
-    public String getColor() {
-        return Color;
-    }
+	public void setNumberPlate(String numberPlate) {
+		this.numberPlate = numberPlate;
+	}
 
-    public void setColor(String Color) {
-        this.Color = Color;
-    }
-    
-    public String getNumber_Plate() {
-        return numberPlate;
-    }
+	public String getColor() {
+		return color;
+	}
 
-    public void setNumber_Plate(String numberPlate) {
-        this.numberPlate = numberPlate;
-    }
-    
-    public String getModel() {
-        return numberPlate;
-    }
+	public void setColor(String color) {
+		this.color = color;
+	}
 
-    public void setModel(String Model) {
-        this.Model = Model;
-    }
+	public String getModel() {
+		return model;
+	}
 
-     
+	public void setModel(String model) {
+		this.model = model;
+	}
+
 }
