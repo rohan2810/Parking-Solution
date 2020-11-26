@@ -154,15 +154,4 @@ CREATE TABLE parkingsolution.Parking_Slip
             ON UPDATE CASCADE
 );
 
-CREATE TABLE `parkingsolution`.`Car`
-(
-    `Car_Id`       INT         NOT NULL AUTO_INCREMENT,
-    `Color`        VARCHAR(45) NULL,
-    `Model`        VARCHAR(45) NULL,
-    `Number_Plate` VARCHAR(7)  NOT NULL,
-    `User_Id`      INT         NOT NULL,
-    PRIMARY KEY (`Car_Id`),
-    UNIQUE INDEX `Number_Plate_UNIQUE` (`Number_Plate` ASC) VISIBLE
-);
-
 
