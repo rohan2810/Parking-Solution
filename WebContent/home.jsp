@@ -13,11 +13,11 @@
 			<nav class="navbar fixed-top">
 				<ul>
 					<li><a href="home.jsp">HOME</a></li>
-					<li><a href="gragelist.html">GARAGE LIST</a></li>
+					<li><a href="garageList.jsp?sortBy=default">GARAGE LIST</a></li>
 					<li><a href="reserveAspot.html">RESERVE A SPOT</a></li>
 					<li><a href="managebooking.html">MANAGE BOOKING</a></li>
-					<li><a href="customerRegister.jsp">REGISTER</a></li>
-					<li><a href="login.html">LOGIN</a></li>
+					<li><a href="Registrations/customerRegister.jsp">REGISTER</a></li>
+					<li><a href="login.jsp">LOGIN</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -25,7 +25,10 @@
 
 	<div class="userInput">
 		<form>
-			<label> <input placeholder="Enter Zip Code...." type="text" name="zip"></label>
+			<label> <input placeholder="Enter Zip Code...." type="text"
+				name="zip">
+				<input type="hidden" name="sortBy" value="default">
+				</label>
 			<button class="button button1" type="submit"
 				formaction="searchByZip.jsp">get started</button>
 		</form>

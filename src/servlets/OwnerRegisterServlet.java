@@ -36,6 +36,6 @@ public class OwnerRegisterServlet extends HttpServlet {
             e.printStackTrace();
         }
 
-        response.sendRedirect("registersuccess.jsp");
+        response.sendRedirect("Dashboards/ownerDashboard.jsp");
     }
 }
