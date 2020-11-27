@@ -30,25 +30,25 @@ tr:nth-child(even) {
 	<div id="label"></div>
 	<select id="mySelect" name="forma" onchange="location = this.value;">
 		<option
-			value="searchByZip.jsp?sortBy=default&zip=<%=request.getParameter("zip")%>">Sort
+			value="searchByName.jsp?sortBy=default&search=<%=request.getParameter("search")%>">Sort
 			By</option>
 		<option
-			value="searchByZip.jsp?sortBy=costAsc&zip=<%=request.getParameter("zip")%>">Cost:
+			value="searchByName.jsp?sortBy=costAsc&search=<%=request.getParameter("search")%>">Cost:
 			Low to High</option>
 		<option
-			value="searchByZip.jsp?sortBy=costDes&zip=<%=request.getParameter("zip")%>">Cost:
+			value="searchByName.jsp?sortBy=costDes&search=<%=request.getParameter("search")%>">Cost:
 			High to Low</option>
 		<option
-			value="searchByZip.jsp?sortBy=availbDes&zip=<%=request.getParameter("zip")%>">Availability:
+			value="searchByName.jsp?sortBy=availbDes&search=<%=request.getParameter("search")%>">Availability:
 			High to Low</option>
 		<option
-			value="searchByZip.jsp?sortBy=availbAsc&zip=<%=request.getParameter("zip")%>">Availability:
+			value="searchByName.jsp?sortBy=availbAsc&search=<%=request.getParameter("search")%>">Availability:
 			Low to High</option>
 		<option
-			value="searchByZip.jsp?sortBy=zipAsc&zip=<%=request.getParameter("zip")%>">Zip:
+			value="searchByName.jsp?sortBy=zipAsc&search=<%=request.getParameter("search")%>">Zip:
 			Ascending</option>
 		<option
-			value="searchByZip.jsp?sortBy=zipDes&zip=<%=request.getParameter("zip")%>">Zip:
+			value="searchByName.jsp?sortBy=zipDes&search=<%=request.getParameter("search")%>">Zip:
 			Descending</option>
 
 
@@ -57,6 +57,7 @@ tr:nth-child(even) {
 	<div style="overflow-x: auto;">
 		<table>
 			<tr>
+				<th>S. No</th>
 				<th>Zip Code</th>
 				<th>Price ($/ hr)</th>
 				<th>Garage Name</th>
@@ -65,57 +66,55 @@ tr:nth-child(even) {
 			</tr>
 			<div>
 				<%
-					String sortBy = request.getParameter("sortBy");
+					String search = request.getParameter("search");
+				String sortBy = request.getParameter("sortBy");
+
 				try (Connection connection = Util.getConnection()) {
-					int parsedZip = Integer.parseInt((String) request.getParameter("zip"));
 					PreparedStatement statement = connection
-					.prepareStatement("SELECT * FROM parkingsolution.garage where Zip between ? and ?");
+					.prepareStatement("SELECT * FROM parkingsolution.garage WHERE Garage_Name LIKE ?");
 					switch (sortBy) {
 					case "costAsc":
 						statement = connection.prepareStatement(
-						"SELECT * FROM parkingsolution.garage where Zip between ? and ? ORDER BY Set_Cost ASC");
+						"SELECT * FROM parkingsolution.garage WHERE Garage_Name LIKE ? ORDER BY Set_Cost ASC");
 						break;
 					case "costDes":
 						statement = connection.prepareStatement(
-						"SELECT * FROM parkingsolution.garage where Zip between ? and ? ORDER BY Set_Cost DESC");
+						"SELECT * FROM parkingsolution.garage WHERE Garage_Name LIKE ? ORDER BY Set_Cost DESC");
 						break;
 					case "availbDes":
 						statement = connection.prepareStatement(
-						"SELECT * FROM parkingsolution.garage where Zip between ? and ? ORDER BY Number_Spots DESC");
+						"SELECT * FROM parkingsolution.garage WHERE Garage_Name LIKE ? ORDER BY Number_Spots DESC");
 						break;
 					case "availbAsc":
 						statement = connection.prepareStatement(
-						"SELECT * FROM parkingsolution.garage where Zip between ? and ? ORDER BY Number_Spots ASC");
+						"SELECT * FROM parkingsolution.garage WHERE Garage_Name LIKE ? ORDER BY Number_Spots ASC");
 						break;
 					case "zipAsc":
 						statement = connection
-						.prepareStatement("SELECT * FROM parkingsolution.garage where Zip between ? and ? ORDER BY Zip ASC");
+						.prepareStatement("SELECT * FROM parkingsolution.garage WHERE Garage_Name LIKE ? ORDER BY Zip ASC");
 						break;
 					case "zipDes":
 						statement = connection
-						.prepareStatement("SELECT * FROM parkingsolution.garage where Zip between ? and ? ORDER BY Zip DESC");
+						.prepareStatement("SELECT * FROM parkingsolution.garage WHERE Garage_Name LIKE ? ORDER BY Zip DESC");
 						break;
 					default:
-						statement = connection.prepareStatement("SELECT * FROM parkingsolution.garage where Zip between ? and ?");
+						statement = connection.prepareStatement("SELECT * FROM parkingsolution.garage WHERE Garage_Name LIKE ?");
 					}
-					statement.setString(1, parsedZip - 10 + "");
-					statement.setString(2, parsedZip + 10 + "");
+					statement.setString(1, "%" + search + "%");
 					ResultSet rs = statement.executeQuery();
+					int i = 1;
 					while (rs.next()) {
-						if (Integer.parseInt(rs.getString(7)) > 0) {
 				%>
 				<tr>
+					<td><%=i++%></td>
 					<td><%=rs.getInt(2)%></td>
 					<td><%=rs.getInt(3)%></td>
-					<td><%=rs.getString(4)%><a
-						href='DisplayItems?ItemId=<%=rs.getString(4)%>'><strong>Select
-								this Garage</strong></a></td>
+					<td><%=rs.getString(4)%></td>
 					<td><%=rs.getString(5)%></td>
-					<td><%=rs.getString(7)%></td>
+					<td><%=rs.getInt(7)%></td>
 				</tr>
 				<%
 					}
-				}
 				rs.close();
 				} catch (SQLException e) {
 				out.println("SQLException caught: " + e.getMessage());
