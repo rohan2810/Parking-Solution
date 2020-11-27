@@ -139,3 +139,41 @@ li {
 	padding: 5px;
 	font-size: 24pt;
 }
+/* Style the search field */
+form.search input[type=text] {
+	font-size: 21px;
+	float: left;
+	width: 22%;	
+	background-color: #4CAF50; /* Green */
+	color: white;
+	padding: 10px;
+	text-align: center;
+	margin: 4px 2px;
+	position: relative;
+	right: 270px;
+}
+
+/* Style the submit button */
+form.search button {
+	float: left;
+	width: 5%;
+	padding: 10px;
+	background: #4CAF50;
+	color: white;
+	font-size: 20px;
+	cursor: pointer;
+	position: relative;
+	right: 272px;
+	top : 5px;
+}
+
+form.search button:hover {
+	background: #0b7dda;
+}
+
+/* Clear floats */
+form.search::after {
+	content: "";
+	clear: both;
+	display: table;
+}
