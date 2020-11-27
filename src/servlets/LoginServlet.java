@@ -30,11 +30,11 @@ public class LoginServlet extends HttpServlet {
             if (loginUserDao.validate(user)) {
                 String userType = loginUserDao.getLoginType(user);
                 if (userType.equals("Owner")) {
-                    response.sendRedirect("ownerDashboard.jsp");
+                    response.sendRedirect("Dashboards/ownerDashboard.jsp");
                 } else if (userType.equals("Operator")) {
-                    response.sendRedirect("operatorDashboard.jsp");
+                    response.sendRedirect("Dashboards/operatorDashboard.jsp");
                 } else {
-                    response.sendRedirect("customerDashboard.jsp");
+                    response.sendRedirect("Dashboards/customerDashboard.jsp");
                 }
             } else {
                 HttpSession session = request.getSession();
