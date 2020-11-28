@@ -8,6 +8,10 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import Utils.Util;
+
 import java.io.IOException;
 
 @WebServlet("/registerCar")
@@ -20,21 +24,21 @@ public class CarRegisterServlet extends HttpServlet {
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws IOException, ServletException {
+			throws IOException, ServletException {
+		HttpSession session = request.getSession();
+		String username = (String) session.getAttribute("uname");
+		String model = request.getParameter("model");
+		String color = request.getParameter("color");
+		String numberPlate = request.getParameter("numberPlate");
+		Car car = new Car(numberPlate, color, model);
 
-        String model = request.getParameter("model");
-        String color = request.getParameter("color");
-        String numberPlate = request.getParameter("numberPlate");
-        
-        Car car = new Car(model, color, numberPlate);
-        
-//        String ownerCode = null;  (NOT SURE WHAT GOES HERE AND CAR_ID AND USERNAME ATTRIBUTES TO BE
-//        try {                         ADDED ABOVE)
-//            ownerCode = registerGarageDao.registerGarage(garage, username);
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//        request.setAttribute("OwnerCode", ownerCode);
-//        request.getRequestDispatcher("garageAdded.jsp").forward(request, response);
-    }
+		try {
+			registerCarDao.registerCar(car, Util.getUserId(username));
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		response.sendRedirect("Dashboards/customerDashboard.jsp");
+	
+	}
 }

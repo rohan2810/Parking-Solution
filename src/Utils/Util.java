@@ -119,6 +119,27 @@ public class Util {
 		return number;
 	}
 
+	public static int getBookingCountForCar(int car_Id) {
+
+		String getCount = "SELECT COUNT(*) FROM parkingsolution.Booking WHERE Car_Id = ?";
+
+		int count = 0;
+
+		try (Connection connection = Util.getConnection()) {
+
+			PreparedStatement preparedStatement1 = connection.prepareStatement(getCount);
+			preparedStatement1.setInt(1, car_Id);
+			ResultSet rs = preparedStatement1.executeQuery();
+			rs.next();
+			count = rs.getInt(1);
+
+		} catch (SQLException e) {
+			printSQLException(e);
+		}
+		return count;
+
+	}
+
 	public static void printSQLException(SQLException ex) {
 		for (Throwable e : ex) {
 			if (e instanceof SQLException) {
