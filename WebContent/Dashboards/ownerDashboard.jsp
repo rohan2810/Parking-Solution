@@ -77,6 +77,7 @@
 					<li><a href="../garageList.jsp?sortBy=default">GARAGE LIST</a></li>
 					<li><a href="../manageBooking.jsp?sortBy=default">MANAGE
 							BOOKING</a><input type="hidden" name="sortBy" value="default"></li>
+					<li><a href="../showOperators.jsp">Show operators</a></li>
 					<li><a href="../manageGarageBookings.jsp?sortBy=default">MANAGE
 							GARAGE BOOKINGS</a><input type="hidden" name="sortBy" value="default"></li>
 					<%
@@ -147,7 +148,7 @@
 			}
 		}
 		function myFunction2() {
-			alert("Operator added!");
+			alert("Operator successfully added!");
 		}
 	</script>
 </body>
