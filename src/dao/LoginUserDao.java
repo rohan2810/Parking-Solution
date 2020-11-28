@@ -30,12 +30,10 @@ public class LoginUserDao {
 		return status;
 	}
 
-	public String getLoginType(User user) throws ClassNotFoundException {
-		String username = user.getUsername();
+	public String getLoginType(String username) throws ClassNotFoundException {
 		String type = null;
 		try (Connection connection = Util.getConnection()) {
 			int id = Util.getUserId(username);
-
 			PreparedStatement checkOwner = connection
 					.prepareStatement("SELECT * FROM parkingsolution.Owner WHERE User_Id = ?");
 			checkOwner.setInt(1, id);
@@ -47,7 +45,6 @@ public class LoginUserDao {
 						.prepareStatement("SELECT * FROM parkingsolution.Operator WHERE User_Id = ?");
 				checkOperator.setInt(1, id);
 				ResultSet rs2 = checkOperator.executeQuery();
-				rs2.next();
 				if (rs2.next()) {
 					type = "Operator";
 				} else {

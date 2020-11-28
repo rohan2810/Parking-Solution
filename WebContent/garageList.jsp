@@ -27,6 +27,11 @@ tr:nth-child(even) {
 </style>
 </head>
 <body>
+	<%
+		if (session.getAttribute("uname") == null) {
+		response.sendRedirect("login.jsp");
+	}
+	%>
 	<div id="label"></div>
 	<select id="mySelect" name="forma" onchange="location = this.value;">
 		<option value="garageList.jsp?sortBy=default">Sort By</option>

@@ -58,8 +58,7 @@
 				<ul>
 					<li><a href="home.jsp">HOME</a></li>
 					<li><a href="garageList.jsp?sortBy=default">GARAGE LIST</a></li>
-					<li><a href="reserveAspot.html">RESERVE A SPOT</a></li>
-					<li><a href="managebooking.html">MANAGE BOOKING</a></li>
+					<li><a href="manageBooking.jsp">MANAGE BOOKING</a></li>
 					<li><a href="Registrations/customerRegister.jsp">REGISTER</a></li>
 					<li><a href="login.jsp">LOGIN</a></li>
 				</ul>
@@ -107,7 +106,7 @@
 			<div class="dropdown">
 				<button class="dropbtn">Manage Your Garage</button>
 				<div class="dropdown-content">
-					<a href="login.jsp">Owner</a> <a href="login.jsp">Operator</a>
+					<a href="Registrations/ownerRegister.jsp">Owner</a> <a href="Registrations/operatorRegister.jsp">Operator</a>
 				</div>
 			</div>
 			<!-- <li><a class="a a1" href="manageGarage.html"> <strong>Manage
