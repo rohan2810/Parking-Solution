@@ -32,6 +32,8 @@ tr:nth-child(even) {
 	<select id="mySelect" name="forma" onchange="location = this.value;">
 		<option value="manageGarageBookings.jsp?sortBy=default">View
 			By</option>
+		<option value="manageGarageBookings.jsp?sortBy=default">All
+			Bookings</option>
 		<option value="manageGarageBookings.jsp?sortBy=old">Previous
 			Bookings</option>
 		<option value="manageGarageBookings.jsp?sortBy=new">Advanced
@@ -40,7 +42,6 @@ tr:nth-child(even) {
 			String username = (String) session.getAttribute("uname");
 		String sortBy = request.getParameter("sortBy");
 		int garageId = Util.getGarageIdFromUsermame(username);
-		System.out.println(garageId);
 		%>
 	</select>
 	<h2 style="color: Tomato;">Booking:</h2>

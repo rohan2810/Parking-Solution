@@ -23,6 +23,25 @@ public class Util {
 		return id;
 	}
 
+	public static String getName(int userId) throws ClassNotFoundException {
+		String getUserId = "SELECT Name from parkingsolution.User where Id = ?";
+
+		String nameString = "";
+
+		try (Connection connection = Util.getConnection()) {
+
+			PreparedStatement preparedStatement1 = connection.prepareStatement(getUserId);
+			preparedStatement1.setInt(1, userId);
+			ResultSet rs = preparedStatement1.executeQuery();
+			rs.next();
+			nameString = rs.getString(1);
+
+		} catch (SQLException e) {
+			printSQLException(e);
+		}
+		return nameString;
+	}
+
 	public static int getGarageId(String garageName) throws ClassNotFoundException {
 		String getGarageId = "SELECT Garage_Id from parkingsolution.Garage where Garage_Name = ?";
 

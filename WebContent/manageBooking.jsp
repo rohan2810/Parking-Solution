@@ -30,7 +30,8 @@ tr:nth-child(even) {
 <body>
 	<div id="label"></div>
 	<select id="mySelect" name="forma" onchange="location = this.value;">
-		<option value="manageBooking.jsp?sortBy=default">View By</option>
+		<option value="manageBooking.jsp?sortBy=default">View
+			By</option>
 		<option value="manageBooking.jsp?sortBy=old">Previous
 			Bookings</option>
 		<option value="manageBooking.jsp?sortBy=new">Advanced
