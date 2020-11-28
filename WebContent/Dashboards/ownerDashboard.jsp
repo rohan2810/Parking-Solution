@@ -3,6 +3,11 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<link href="../css/homestyles.css" rel="stylesheet">
+<link href="../css/popup.css" rel="stylesheet">
+<link href="../css/textbox.css" rel="stylesheet">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -12,18 +17,33 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
+	<header>
+		<div class="container">
+			<h3 class="projectTitle">ParkingSolution</h3>
+			<nav class="navbar fixed-top">
+				<ul>
+					<li><a href="../home.jsp">HOME</a></li>
+					<li><a href="../garageList.jsp?sortBy=default">GARAGE LIST</a></li>
+					<li><a href="../manageBooking.jsp?sortBy=default">MANAGE
+							BOOKING</a><input type="hidden" name="sortBy" value="default"></li>
+					<li><a href="../manageGarageBookings.jsp?sortBy=default">MANAGE
+							GARAGE BOOKINGS</a><input type="hidden" name="sortBy" value="default"></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
 	<div align="center">
 		<h1>/Owner Dashboard</h1>
 		<h2>hello ${uname}</h2>
-		<form action= "<%=request.getContextPath()%>/logout">
-		<input type = "submit" value = "Logout">
+		<form action="<%=request.getContextPath()%>/logout">
+			<input type="submit" value="Logout">
 		</form>
 		<!-- <form action= "Logout">
 			<a class="btn btn-info btn-lg"> <span
 				class="glyphicon glyphicon-log-out"></span> Log out
 			</a>
 		</form> -->
-		
+
 	</div>
 </body>
 </html>

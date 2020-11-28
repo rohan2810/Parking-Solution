@@ -28,7 +28,8 @@ tr:nth-child(even) {
 </head>
 <body>
 	<%
-		if (session.getAttribute("uname") == null) {
+		response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+	if (session.getAttribute("uname") == null) {
 		response.sendRedirect("login.jsp");
 	}
 	%>

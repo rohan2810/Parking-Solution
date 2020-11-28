@@ -119,10 +119,12 @@ CREATE TABLE parkingsolution.Booking
     End_Time     DATETIME   NOT NULL,
     Cost         INT        NOT NULL,
     Booking_Time DATETIME   NOT NULL DEFAULT now() ON UPDATE now(),
+	Garage_Id	INT			NOT NULL,
     PRIMARY KEY (Booking_Id),
     UNIQUE INDEX Code_UNIQUE (Code ASC) VISIBLE,
     INDEX fk_booking_user_idx (User_Id ASC) VISIBLE,
     INDEX Car_Id_UNIQUE (Car_Id ASC) VISIBLE,
+	INDEX GAR_Id_UNIQUE (Garage_Id ASC) VISIBLE,
     CONSTRAINT fk_booking_user
         FOREIGN KEY (User_Id)
             REFERENCES parkingsolution.User (Id)

@@ -30,20 +30,26 @@ tr:nth-child(even) {
 <body>
 	<div id="label"></div>
 	<select id="mySelect" name="forma" onchange="location = this.value;">
-		<option value="manageBooking.jsp?sortBy=default">View By</option>
-		<option value="manageBooking.jsp?sortBy=old">Previous
+		<option value="manageGarageBookings.jsp?sortBy=default">View
+			By</option>
+		<option value="manageGarageBookings.jsp?sortBy=old">Previous
 			Bookings</option>
-		<option value="manageBooking.jsp?sortBy=new">Advanced
+		<option value="manageGarageBookings.jsp?sortBy=new">Advanced
 			Bookings</option>
-
+		<%
+			String username = (String) session.getAttribute("uname");
+		String sortBy = request.getParameter("sortBy");
+		int garageId = Util.getGarageIdFromUsermame(username);
+		System.out.println(garageId);
+		%>
 	</select>
-	<h2 style="color: Tomato;">Booking::</h2>
+	<h2 style="color: Tomato;">Booking:</h2>
+	<h3 style="color: Tomato;"><%=Util.getGarageName(garageId)%></h3>
 	<div style="overflow-x: auto;">
 		<table>
 			<tr>
 				<th>S. No</th>
 				<th>Booking Id</th>
-				<th>Garage Name</th>
 				<th>Number_Plate</th>
 				<th>Spot</th>
 				<th>Start Time</th>
@@ -53,25 +59,22 @@ tr:nth-child(even) {
 			</tr>
 			<div>
 				<%
-					String username = (String) session.getAttribute("uname");
-				String sortBy = request.getParameter("sortBy");
-
-				try (Connection connection = Util.getConnection()) {
+					try (Connection connection = Util.getConnection()) {
 					PreparedStatement statement = connection
-					.prepareStatement("SELECT * FROM parkingsolution.Booking WHERE User_Id = ?");
+					.prepareStatement("SELECT * FROM parkingsolution.Booking WHERE Garage_Id = ?");
 					switch (sortBy) {
 					case "old":
 						statement = connection
-						.prepareStatement("SELECT * FROM parkingsolution.Booking WHERE User_Id = ? AND Start_Time < NOW();");
+						.prepareStatement("SELECT * FROM parkingsolution.Booking WHERE Garage_Id = ? AND Start_Time < NOW();");
 						break;
 					case "new":
 						statement = connection
-						.prepareStatement("SELECT * FROM parkingsolution.Booking WHERE User_Id = ? AND Start_Time >= NOW();");
+						.prepareStatement("SELECT * FROM parkingsolution.Booking WHERE Garage_Id = ? AND Start_Time >= NOW();");
 						break;
 					default:
-						statement = connection.prepareStatement("SELECT * FROM parkingsolution.Booking WHERE User_Id = ?");
+						statement = connection.prepareStatement("SELECT * FROM parkingsolution.Booking WHERE Garage_Id = ?");
 					}
-					statement.setInt(1, Util.getUserId(username));
+					statement.setInt(1, garageId);
 					ResultSet rs = statement.executeQuery();
 					int i = 1;
 					while (rs.next()) {
@@ -79,7 +82,6 @@ tr:nth-child(even) {
 				<tr>
 					<td><%=i++%></td>
 					<td><%=rs.getInt(1)%></td>
-					<td><%=Util.getGarageName(rs.getInt(10))%></td>
 					<td><%=Util.getCarNumber(rs.getInt(3))%></td>
 					<td><%=rs.getInt(4)%></td>
 					<td><%=rs.getDate(6)%></td>
