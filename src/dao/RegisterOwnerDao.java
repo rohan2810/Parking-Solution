@@ -26,7 +26,6 @@ public class RegisterOwnerDao {
 			preparedStatement.setString(3, owner.getName());
 			preparedStatement.setString(4, owner.getPassword());
 			preparedStatement.setString(5, owner.getPhone_number());
-			System.out.println(preparedStatement);
 			preparedStatement.executeUpdate();
 
 			id = Util.getUserId(owner.getUsername());
@@ -35,7 +34,6 @@ public class RegisterOwnerDao {
 			preparedStatement2.setInt(1, id);
 			preparedStatement2.setInt(2, Integer.parseInt(owner.getOnwer_code().substring(0, 2)));
 			preparedStatement2.setString(3, owner.getOnwer_code());
-			System.out.println(preparedStatement2);
 			preparedStatement2.executeUpdate();
 
 		} catch (SQLException e) {

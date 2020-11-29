@@ -7,6 +7,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
 import java.io.IOException;
 
 @WebServlet("/registerOperator")
@@ -31,6 +33,8 @@ public class OperatorRegisterServlet extends HttpServlet {
 
 		try {
 			registerOperatorDao.registerOperator(operator);
+			HttpSession session = request.getSession();
+			session.setAttribute("uname", username);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

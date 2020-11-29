@@ -7,6 +7,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
 import java.io.IOException;
 
 @WebServlet("/registerCustomer")
@@ -30,6 +32,8 @@ public class CustomerRegisterServlet extends HttpServlet {
 
 		try {
 			registerCustomerDao.registerCustomer(user);
+			HttpSession session = request.getSession();
+			session.setAttribute("uname", username);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

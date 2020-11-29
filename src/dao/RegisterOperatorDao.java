@@ -27,7 +27,6 @@ public class RegisterOperatorDao {
 			preparedStatement.setString(3, operator.getName());
 			preparedStatement.setString(4, operator.getPassword());
 			preparedStatement.setString(5, operator.getPhone_number());
-			System.out.println(preparedStatement);
 			preparedStatement.executeUpdate();
 
 			id = Util.getUserId(operator.getUsername());
@@ -36,7 +35,6 @@ public class RegisterOperatorDao {
 			preparedStatement2.setInt(1, id);
 			preparedStatement2.setInt(2, Integer.parseInt(operator.getOperatorCode().substring(0, 2)));
 			preparedStatement2.setString(3, operator.getOperatorCode());
-			System.out.println(preparedStatement2);
 			preparedStatement2.executeUpdate();
 
 		} catch (SQLException e) {
