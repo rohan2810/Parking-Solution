@@ -10,10 +10,7 @@ public class LoginUserDao {
 	public boolean validate(User login) throws ClassNotFoundException {
 		boolean status = false;
 
-		Class.forName("com.mysql.jdbc.Driver");
-
-		try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/parkingsolution", "root",
-				"root")) {
+		try (Connection connection = Util.getConnection()) {
 
 			PreparedStatement preparedStatement = connection
 					.prepareStatement("select * from parkingsolution.User where username = ? and password = ? ");

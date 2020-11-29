@@ -21,7 +21,6 @@ public class RegisterCustomerDao {
 			preparedStatement.setString(3, user.getName());
 			preparedStatement.setString(4, user.getPassword());
 			preparedStatement.setString(5, user.getPhone_number());
-			System.out.println(preparedStatement);
 			preparedStatement.executeUpdate();
 
 		} catch (SQLException e) {

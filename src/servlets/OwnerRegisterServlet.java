@@ -11,31 +11,30 @@ import java.io.IOException;
 
 @WebServlet("/registerOwner")
 public class OwnerRegisterServlet extends HttpServlet {
-    private static final long serialVersionUID = 1L;
-    private RegisterOwnerDao registerOwnerDao;
+	private static final long serialVersionUID = 1L;
+	private RegisterOwnerDao registerOwnerDao;
 
-    public void init() {
-        registerOwnerDao = new RegisterOwnerDao();
-    }
+	public void init() {
+		registerOwnerDao = new RegisterOwnerDao();
+	}
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
-        String username = request.getParameter("username");
-        String email = request.getParameter("email");
-        String name = request.getParameter("name");
-        String password = request.getParameter("password");
-        String phonenumber = request.getParameter("phonenumber");
-        String code = request.getParameter("code");
+		String username = request.getParameter("username");
+		String email = request.getParameter("email");
+		String name = request.getParameter("name");
+		String password = request.getParameter("password");
+		String phonenumber = request.getParameter("phonenumber");
+		String code = request.getParameter("code");
 
-        Owner operator = new Owner(username, email, name, phonenumber, password, code);
+		Owner operator = new Owner(username, email, name, phonenumber, password, code);
 
-        try {
-            registerOwnerDao.registerOwner(operator);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+		try {
+			registerOwnerDao.registerOwner(operator);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 
-        response.sendRedirect("Dashboards/ownerDashboard.jsp");
-    }
+		response.sendRedirect("Dashboards/ownerDashboard.jsp");
+	}
 }
