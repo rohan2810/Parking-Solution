@@ -47,6 +47,34 @@
 		</form> -->
 
 	</div>
+		<div class="userInput">
+		<form>
+			<label> <input placeholder="Enter Zip Code...." type="text"
+				name="zip"> <input type="hidden" name="sortBy"
+				value="default">
+			</label>
+			<button class="button button1" type="submit"
+				formaction="../searchByZip.jsp">get started</button>
+		</form>
+	</div>
+	<section class="right">
+		<div>
+			<form class="search" action="../searchByName.jsp?sortBy=default">
+				<input type="text" placeholder="Or Search by Garage Name...."
+					name="search"><input type="hidden" name="sortBy"
+					value="default">
+				<button class="button button1" type="submit">
+					<i class="fa fa-search"></i>
+				</button>
+			</form>
+		</div>
+		<!-- 		<div>
+			<form method="POST" id="searchByGrage" action="searchbygrage.jsp">
+				<input type="submit" class="button button2" name="searchByGrage"
+					value="or search by garage">
+			</form>
+		</div> -->
+	</section>
 	<script>
 		/* When the user clicks on the button, 
 		 toggle between hiding and showing the dropdown content */

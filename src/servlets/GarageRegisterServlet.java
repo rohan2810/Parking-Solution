@@ -8,6 +8,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
 import java.io.IOException;
 
 @WebServlet("/registerGarage")
@@ -22,13 +24,14 @@ public class GarageRegisterServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException {
 
+		HttpSession session = request.getSession();
+		String username = (String) session.getAttribute("uname");
 		String garageName = request.getParameter("garageName");
 		int setCost = Integer.parseInt(request.getParameter("setCost"));
 		String zip = request.getParameter("zip");
 		String garageAddress = request.getParameter("garageAddress");
 		int numberFloors = Integer.parseInt(request.getParameter("numberFloors"));
 		int numberSpots = Integer.parseInt(request.getParameter("numberSpots"));
-		String username = request.getParameter("username");
 
 		Garage garage = new Garage(garageName, setCost, zip, garageAddress, numberFloors, numberSpots);
 		String ownerCode = null;
@@ -37,8 +40,8 @@ public class GarageRegisterServlet extends HttpServlet {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		request.setAttribute("OwnerCode", ownerCode);
-		request.getRequestDispatcher("garageAdded.jsp").forward(request, response);
+		session.setAttribute("OwnerCode", ownerCode);
+		response.sendRedirect("Dashboards/ownerDashboard.jsp");
 	}
 
 }
