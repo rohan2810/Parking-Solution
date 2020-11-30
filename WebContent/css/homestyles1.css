@@ -1,0 +1,179 @@
+body {
+	margin: 0;
+	color: rgb(255, 255, 255);
+	background: rgb(59, 59, 59) no-repeat fixed;
+	background-size: cover;
+	overflow-x: hidden;
+}
+
+.userInput {
+	width: 50%;
+	text-align: center;
+	position: relative;
+	left: 30%;
+	top: 100px;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+header {
+	background: #4CAF50;
+	padding: 6px;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0.1px;
+	z-index: 3;
+}
+
+header::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+h3 {
+	float: left;
+	font-family: "Cinzel", serif;
+	font-size: 30px;
+	margin: 0;
+}
+
+.container {
+	width: 90%;
+	margin: 0 auto;
+	font-family: "Cinzel", serif;
+}
+
+/* NAVBAR */
+.navbar {
+	float: right;
+	top: 0;
+	z-index: 999;
+}
+
+.navbar ul {
+	list-style: none;
+	margin: 0;
+}
+
+.navbar li {
+	display: inline-block;
+	margin-left: 45px;
+	padding: 5px;
+	font-size: 18px;
+}
+
+.right {
+	position: relative;
+	left: 910px;
+	top: 100px;
+}
+
+.button {
+	background-color: #4CAF50; /* Green */
+	border: none;
+	color: white;
+	padding: 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 12px;
+	margin: 4px 2px;
+	cursor: pointer;
+}
+
+.button1 {
+	border-radius: 12px;
+	width: 100px;
+	margin: auto;
+}
+
+.button2 {
+	background: transparent;
+	border-radius: 12px;
+	margin: auto;
+	font-size: 16pt;
+	position: relative;
+	right: 255px;
+}
+
+::placeholder {
+	color: white;
+	opacity: 0.7;
+}
+
+/* FOOTER */
+.footer {
+	position: fixed;
+	background: #4CAF50;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	color: white;
+	display: flex;
+	justify-content: space-between;
+}
+
+/* .description {
+    background-color: green;
+    width:100%;
+    color: white;
+    position: relative;
+    top: 670px;
+    text-align: center;
+    left: 380px;
+    padding-bottom: 5px;
+}
+ */
+ul {
+	list-style: none;
+	margin: 0;
+}
+
+li {
+	display: inline-block;
+	margin-left: 5px;
+	padding: 5px;
+	font-size: 24pt;
+}
+/* Style the search field */
+form.search input[type=text] {
+	font-size: 21px;
+	float: left;
+	width: 22%;	
+	background-color: #4CAF50; /* Green */
+	color: white;
+	padding: 10px;
+	text-align: center;
+	margin: 4px 2px;
+	position: relative;
+	right: 270px;
+}
+
+/* Style the submit button */
+form.search button {
+	float: left;
+	width: 5%;
+	padding: 10px;
+	background: #4CAF50;
+	color: white;
+	font-size: 20px;
+	cursor: pointer;
+	position: relative;
+	right: 272px;
+	top : 5px;
+}
+
+form.search button:hover {
+	background: #0b7dda;
+}
+
+/* Clear floats */
+form.search::after {
+	content: "";
+	clear: both;
+	display: table;
+}

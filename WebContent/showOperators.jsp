@@ -6,6 +6,11 @@
 <%@ page import="java.sql.SQLException"%>
 <html>
 <head>
+<link href="css/homestyles1.css" rel="stylesheet">
+<link href="css/popup.css" rel="stylesheet">
+<link href="css/textbox.css" rel="stylesheet">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 table {
 	border-collapse: collapse;
@@ -23,7 +28,7 @@ td a {
 }
 
 tr:nth-child(even) {
-	background-color: #f2f2f2;
+	background-color: #ff6347;
 }
 </style>
 </head>
@@ -33,8 +38,18 @@ tr:nth-child(even) {
 		String username = (String) session.getAttribute("uname");
 	int garageId = Util.getGarageIdFromUsermame(username);
 	%>
+	<header>
+		<div class="container">
+			<nav class="navbar fixed-top">
+				<ul>
+					<li><a href="home.jsp">HOME</a></li>
+					<li><a href="dashboard.jsp">DASHBOARD</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
 	<h2 style="color: Tomato;">Operators Working at your garage:</h2>
-	<h3 style="color: Tomato;"><%=Util.getGarageName(garageId)%></h3>
+	<h2 style="color: Tomato;"><%=Util.getGarageName(garageId)%></h2>
 	<div style="overflow-x: auto;">
 		<table>
 			<tr>

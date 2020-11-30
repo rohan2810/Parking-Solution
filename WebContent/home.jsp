@@ -57,6 +57,7 @@
 			<nav class="navbar fixed-top">
 				<ul>
 					<li><a href="home.jsp">HOME</a></li>
+					<li><a href="dashboard.jsp">DASHBOARD</a></li>
 					<li><a href="garageList.jsp?sortBy=default">GARAGE LIST</a></li>
 					<li><a href="Registrations/customerRegister.jsp">REGISTER</a></li>
 					<li><a href="login.jsp">LOGIN</a></li>

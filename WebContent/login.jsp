@@ -2,6 +2,11 @@
 <%@page import="dao.LoginUserDao"%>
 <html>
 <head>
+<link href="css/homestyles.css" rel="stylesheet">
+<link href="css/popup.css" rel="stylesheet">
+<link href="css/textbox.css" rel="stylesheet">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <meta charset="UTF-8">
 <title>Login</title>
 <link rel="stylesheet" href="css/login.css">
@@ -21,6 +26,16 @@
 		}
 	}
 	%>
+	<header>
+		<div class="container">
+			<nav class="navbar fixed-top">
+				<ul>
+					<li><a href="home.jsp">HOME</a></li>
+					<li><a href="dashboard.jsp">DASHBOARD</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
 
 	<div class="sign_up">
 		<form method="post" id="login"

@@ -6,6 +6,11 @@
 <%@ page import="java.sql.SQLException"%>
 <html>
 <head>
+<link href="css/homestyles1.css" rel="stylesheet">
+<link href="css/popup.css" rel="stylesheet">
+<link href="css/textbox.css" rel="stylesheet">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 table {
 	border-collapse: collapse;
@@ -23,15 +28,24 @@ td a {
 }
 
 tr:nth-child(even) {
-	background-color: #f2f2f2;
+	background-color: #ff6347;
 }
 </style>
 </head>
 <body>
+	<header>
+		<div class="container">
+			<nav class="navbar fixed-top">
+				<ul>
+					<li><a href="home.jsp">HOME</a></li>
+					<li><a href="dashboard.jsp">DASHBOARD</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
 	<div id="label"></div>
 	<select id="mySelect" name="forma" onchange="location = this.value;">
-		<option value="manageBooking.jsp?sortBy=default">View
-			By</option>
+		<option value="manageBooking.jsp?sortBy=default">View By</option>
 		<option value="manageBooking.jsp?sortBy=old">Previous
 			Bookings</option>
 		<option value="manageBooking.jsp?sortBy=new">Advanced
