@@ -101,15 +101,23 @@
 			<li>BEST SERVICE</li>
 		</div>
 		<div class="rightFooter">
-			<li><a class="a a1" href="support.html"> <strong>Support</strong></a>
-			</li>
-			<div class="dropdown">
+			
+			<div class="dropdown">				
 				<button class="dropbtn">Manage Your Garage</button>
 				<div class="dropdown-content">
-					<a href="Registrations/ownerRegister.jsp">Owner</a> <a
-						href="Registrations/operatorRegister.jsp">Operator</a>
+					<a href="Registrations/ownerRegister.jsp">Owner</a> 
+					<a	href="Registrations/operatorRegister.jsp">Operator</a>
 				</div>
 			</div>
+			
+			<div class="dropdown">				
+				<button class="dropbtn"> Support </button>
+				<div class="dropdown-content">
+					<a> help@garage.com </a> 
+					<a> 456-789-0000</a>
+				</div>
+			</div>
+			
 			<!-- <li><a class="a a1" href="manageGarage.html"> <strong>Manage
 						Your Garage</strong></a></li> -->
 		</div>
