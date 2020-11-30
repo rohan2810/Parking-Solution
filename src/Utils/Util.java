@@ -99,6 +99,26 @@ public class Util {
 		}
 		return id;
 	}
+	
+	public static int getGarageIdFromUsermameOpr(String username) throws ClassNotFoundException {
+		int userId = Util.getUserId(username);
+		String getGarageId = "SELECT Garage_Id from parkingsolution.Operator where User_Id = ?";
+
+		int id = 0;
+
+		try (Connection connection = Util.getConnection()) {
+
+			PreparedStatement preparedStatement1 = connection.prepareStatement(getGarageId);
+			preparedStatement1.setInt(1, userId);
+			ResultSet rs = preparedStatement1.executeQuery();
+			rs.next();
+			id = rs.getInt(1);
+
+		} catch (SQLException e) {
+			printSQLException(e);
+		}
+		return id;
+	}
 
 	public static String getCarNumber(int id) throws ClassNotFoundException {
 		String getGarageId = "SELECT Number_Plate from parkingsolution.Car where Car_Id = ?";
