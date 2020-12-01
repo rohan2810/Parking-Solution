@@ -21,9 +21,20 @@ input.submit{
     border-radius: 18px;
     transform: scale(1.2);
 }
+input.submitout{
+    color: white;
+    margin: 2%;
+    border-radius: 18px;
+    transform: scale(1.2);
+}
 input.already{
     margin:0 auto;
     background-color: transparent;
+}
+input.logout{
+    margin:0 auto;
+    background-color: transparent;
+    color: white;
 }
 input.smallfont{
     color: rgb(231, 231, 231);
