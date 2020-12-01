@@ -56,6 +56,7 @@ tr:nth-child(even) {
 				<th>Start Hour</th>
 				<th>End Hour</th>
 				<th>Cost</th>
+				<th>After Penalty Cost</th>
 				<th>Booking Time</th>
 				<th>Code</th>
 			</tr>
@@ -64,8 +65,8 @@ tr:nth-child(even) {
 					String username = (String) session.getAttribute("uname");
 
 				try (Connection connection = Util.getConnection()) {
-					PreparedStatement statement = connection
-					.prepareStatement("SELECT * FROM parkingsolution.Booking WHERE User_Id = ? AND Date >= CURDATE();");
+					PreparedStatement statement = connection.prepareStatement(
+					"SELECT * FROM parkingsolution.Booking,Parking_Slip WHERE Booking.Booking_Id = Parking_Slip.Booking_Id and Booking.User_Id = ? and booking.Date < DATE_SUB(CURDATE(), INTERVAL 1 DAY); ");
 					statement.setInt(1, Util.getUserId(username));
 					ResultSet rs = statement.executeQuery();
 					int i = 1;
@@ -81,6 +82,7 @@ tr:nth-child(even) {
 					<td><%=rs.getInt(7)%></td>
 					<td><%=rs.getInt(8)%></td>
 					<td><%=rs.getInt(9)%></td>
+					<td><%=rs.getInt(19)%></td>
 					<td><%=rs.getDate(10)%></td>
 					<td><%=rs.getString(5)%></td>
 				</tr>

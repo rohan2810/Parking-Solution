@@ -28,16 +28,22 @@
 			<h3 class="title">ParkingSolution</h3>
 			<nav class="navbar fixed-top">
 				<ul>
-					<li><a class = "dash" href="../home.jsp">HOME</a></li>
-					<li><a class = "dash" href="../garageList.jsp?sortBy=default">GARAGE LIST</a></li>
-					<li><a class = "dash" href="../Registrations/garageRegister.jsp">Add a
-							new Garage</a></li>
-					<li><a class = "dash" href="../manageBooking.jsp?sortBy=default">MANAGE
-							BOOKING</a><input type="hidden" name="sortBy" value="default"></li>
-					<li><a class = "dash" href="../viewYourGarages.jsp?sortBy=default">View
-							Your Garages</a><input type="hidden" name="sortBy" value="default"></li>
-					<li><a class = "dash" href="../showOperators.jsp">Show operators</a></li>
-					<li><a class = "dash" href="../manageGarageBookings.jsp?sortBy=default">MANAGE
+					<li><a class="dash" href="../home.jsp">HOME</a></li>
+					<li><a class="dash" href="../garageList.jsp?sortBy=default">GARAGE
+							LIST</a></li>
+					<li><a class="dash" href="../Registrations/garageRegister.jsp">Add
+							a new Garage</a></li>
+					<li><a class="dash" href="../previousBookings.jsp">PREVIOUS
+							BOOKINGS</a></li>
+					<li><a class="dash" href="../manageBooking.jsp">MANAGE NEW
+							BOOKINGS</a></li>
+					<li><a class="dash"
+						href="../viewYourGarages.jsp?sortBy=default">View Your Garages</a><input
+						type="hidden" name="sortBy" value="default"></li>
+					<li><a class="dash" href="../showOperators.jsp">Show
+							operators</a></li>
+					<li><a class="dash"
+						href="../manageGarageBookings.jsp?sortBy=default">MANAGE
 							GARAGE BOOKINGS</a><input type="hidden" name="sortBy" value="default"></li>
 					<%
 						String username = (String) session.getAttribute("uname");
@@ -76,7 +82,7 @@
 		<h1 class="title">Owner Dashboard</h1>
 		<h2 class="title">hello ${uname}</h2>
 		<form action="<%=request.getContextPath()%>/logout">
-			<input class = "submitout" type="submit" value="Logout">
+			<input class="submitout" type="submit" value="Logout">
 		</form>
 		<!-- <form action= "Logout">
 			<a class="btn btn-info btn-lg"> <span
