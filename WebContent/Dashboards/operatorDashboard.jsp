@@ -36,9 +36,9 @@
 					<li><a class="dash1" href="../manageBooking.jsp">MANAGE NEW
 							BOOKINGS</a></li>
 					<li><a class="dash1"
-						href="../viewYourGaragesOpr.jsp?sortBy=default">View Your
-							Garages</a><input type="hidden" name="sortBy" value="default"></li>
-					<li><a class="dash1" href="../showOwner.jsp">Show owners</a></li>
+						href="../viewYourGaragesOpr.jsp?sortBy=default">VIEW YOUR
+							GARAGES</a><input type="hidden" name="sortBy" value="default"></li>
+					<li><a class="dash1" href="../showOwner.jsp">SHOW OWNERS</a></li>
 					<li><a class="dash1"
 						href="../manageGarageBookingsOpr.jsp?sortBy=default">MANAGE
 							GARAGE BOOKINGS</a><input type="hidden" name="sortBy" value="default"></li>

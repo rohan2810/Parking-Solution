@@ -31,17 +31,16 @@
 					<li><a class="dash" href="../home.jsp">HOME</a></li>
 					<li><a class="dash" href="../garageList.jsp?sortBy=default">GARAGE
 							LIST</a></li>
-					<li><a class="dash" href="../Registrations/garageRegister.jsp">Add
-							a new Garage</a></li>
+					<li><a class="dash" href="../Registrations/garageRegister.jsp">ADD A NEW GARAGE</a></li>
 					<li><a class="dash" href="../previousBookings.jsp">PREVIOUS
 							BOOKINGS</a></li>
 					<li><a class="dash" href="../manageBooking.jsp">MANAGE NEW
 							BOOKINGS</a></li>
 					<li><a class="dash"
-						href="../viewYourGarages.jsp?sortBy=default">View Your Garages</a><input
+						href="../viewYourGarages.jsp?sortBy=default">VIEW YOUR GARAGES</a><input
 						type="hidden" name="sortBy" value="default"></li>
-					<li><a class="dash" href="../showOperators.jsp">Show
-							operators</a></li>
+					<li><a class="dash" href="../showOperators.jsp">SHOW
+							OPERATORS</a></li>
 					<li><a class="dash"
 						href="../manageGarageBookings.jsp?sortBy=default">MANAGE
 							GARAGE BOOKINGS</a><input type="hidden" name="sortBy" value="default"></li>
