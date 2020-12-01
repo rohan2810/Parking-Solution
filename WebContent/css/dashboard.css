@@ -68,6 +68,12 @@ a:visited:active{
     color: white;
   }
 a.dash {
+	font-size: 120%;
+	text-decoration: none;
+	color: white;
+}
+a.dash1 {
+	font-size: 90%;
 	text-decoration: none;
 	color: white;
 }
@@ -249,7 +255,6 @@ form.search::after {
 }
 
 .dropdown {
-	right:50px;
 	position: relative;
 	display: inline-block;
 }

@@ -30,6 +30,7 @@ body {
 }
 .belowuserInput{
 	width: 50%;
+	transform: scale(1.05);
 	text-align: center;
 	position: relative;
 	left: 30%;

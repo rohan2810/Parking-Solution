@@ -28,18 +28,18 @@
 			<h3 class="title">ParkingSolution</h3>
 			<nav class="navbar fixed-top">
 				<ul>
-					<li><a class="dash" href="../home.jsp">HOME</a></li>
-					<li><a class="dash" href="../garageList.jsp?sortBy=default">GARAGE
+					<li><a class="dash1" href="../home.jsp">HOME</a></li>
+					<li><a class="dash1" href="../garageList.jsp?sortBy=default">GARAGE
 							LIST</a></li>
-					<li><a class="dash" href="../previousBookings.jsp">PREVIOUS
+					<li><a class="dash1" href="../previousBookings.jsp">PREVIOUS
 							BOOKINGS</a></li>
-					<li><a class="dash" href="../manageBooking.jsp">MANAGE NEW
+					<li><a class="dash1" href="../manageBooking.jsp">MANAGE NEW
 							BOOKINGS</a></li>
-					<li><a class="dash"
+					<li><a class="dash1"
 						href="../viewYourGaragesOpr.jsp?sortBy=default">View Your
 							Garages</a><input type="hidden" name="sortBy" value="default"></li>
-					<li><a class="dash" href="../showOwner.jsp">Show owners</a></li>
-					<li><a class="dash"
+					<li><a class="dash1" href="../showOwner.jsp">Show owners</a></li>
+					<li><a class="dash1"
 						href="../manageGarageBookingsOpr.jsp?sortBy=default">MANAGE
 							GARAGE BOOKINGS</a><input type="hidden" name="sortBy" value="default"></li>
 				</ul>
