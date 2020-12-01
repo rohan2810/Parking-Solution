@@ -20,6 +20,9 @@
 			response.sendRedirect("Dashboards/customerDashboard.jsp");
 		}
 	}
+		else{
+			response.sendRedirect("login.jsp");
+		}
 	%>
 </body>
 </html>

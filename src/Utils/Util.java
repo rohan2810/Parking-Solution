@@ -42,6 +42,25 @@ public class Util {
 		return nameString;
 	}
 
+	public static int getCarId(String numberPlate) throws ClassNotFoundException {
+		String getCarId = "SELECT Car_Id from parkingsolution.Car where Number_Plate = ?";
+
+		int carId = 0;
+
+		try (Connection connection = Util.getConnection()) {
+
+			PreparedStatement preparedStatement1 = connection.prepareStatement(getCarId);
+			preparedStatement1.setString(1, numberPlate);
+			ResultSet rs = preparedStatement1.executeQuery();
+			rs.next();
+			carId = rs.getInt(1);
+
+		} catch (SQLException e) {
+			printSQLException(e);
+		}
+		return carId;
+	}
+
 	public static int getGarageId(String garageName) throws ClassNotFoundException {
 		String getGarageId = "SELECT Garage_Id from parkingsolution.Garage where Garage_Name = ?";
 
@@ -99,7 +118,7 @@ public class Util {
 		}
 		return id;
 	}
-	
+
 	public static int getGarageIdFromUsermameOpr(String username) throws ClassNotFoundException {
 		int userId = Util.getUserId(username);
 		String getGarageId = "SELECT Garage_Id from parkingsolution.Operator where User_Id = ?";
@@ -158,6 +177,65 @@ public class Util {
 		}
 		return count;
 
+	}
+
+	public static int getCost(int garageId) {
+
+		String getCost = "SELECT Set_Cost FROM parkingsolution.Garage WHERE Garage_Id = ?";
+
+		int cost = 0;
+		try (Connection connection = Util.getConnection()) {
+			PreparedStatement preparedStatement1 = connection.prepareStatement(getCost);
+			preparedStatement1.setInt(1, garageId);
+			ResultSet rs = preparedStatement1.executeQuery();
+			rs.next();
+			cost = rs.getInt(1);
+
+		} catch (SQLException e) {
+			printSQLException(e);
+		}
+		return cost;
+	}
+
+	public static String getSpot(int garageId) {
+
+		String update = "UPDATE parkingsolution.floor,garage SET floor.Total_Booked= floor.Total_Booked+1 WHERE floor.garage_ID = garage.garage_Id and garage.garage_Id = ?;";
+		String getFLoor = "SELECT floor_Id FROM parkingsolution.Floor, Garage where Floor.Garage_Id = Garage.Garage_Id and garage.Garage_Id = ? and floor.Total_Available>0;";
+		String getSpot = "SELECT Spot_Id FROM parkingsolution.Floor, Garage, Spot where Floor.Garage_Id = Garage.Garage_Id and garage.Garage_Id = ? and "
+				+ "floor.floor_Id = ? and spot.Garage_Id = garage.Garage_Id and  spot.Garage_Id = floor.Garage_Id and floor.Total_Available > 0\n"
+				+ "";
+
+		int floor = 0;
+		int spot = 0;
+		try (Connection connection = Util.getConnection()) {
+			PreparedStatement preparedStatement1 = connection.prepareStatement(update);
+			preparedStatement1.setInt(1, garageId);
+			preparedStatement1.executeUpdate();
+
+			PreparedStatement preparedStatement2 = connection.prepareStatement(getFLoor);
+			preparedStatement2.setInt(1, garageId);
+			ResultSet rSet = preparedStatement2.executeQuery();
+			while (rSet.next()) {
+				floor = rSet.getInt(1);
+			}
+
+			PreparedStatement preparedStatement3 = connection.prepareStatement(getSpot);
+			preparedStatement3.setInt(1, garageId);
+			preparedStatement3.setInt(2, floor);
+			ResultSet rSet1 = preparedStatement3.executeQuery();
+			while (rSet1.next()) {
+				spot = rSet1.getInt(1);
+			}
+
+		} catch (SQLException e) {
+			printSQLException(e);
+		}
+		StringBuilder sBuilder = new StringBuilder();
+		sBuilder.append(garageId);
+		sBuilder.append(floor);
+		sBuilder.append(spot);
+
+		return sBuilder.toString();
 	}
 
 	public static void printSQLException(SQLException ex) {

@@ -1,87 +1,48 @@
 package model;
 
 public class Booking {
-	private String bookingid;
-	private String userid;
-	private String spot;
-	private String code;
-	private String starttime;
-	private String endtime;
-	private String carplate;
-	private String cost;
-	private String bookingtime;
-	
+	private int spot;
+	private int start_time;
+	private int end_time;
+	private int cost;
 
-	public Booking(String bookingid, String userid) {
-		super();
-		this.bookingid = bookingid;
-		this.userid = userid;
-	}
-	public Booking(String bookingid, String userid, String spot, String code, String starttime, String endtime,
-			String carplate, String cost, String bookingtime) {
-		super();
-		this.bookingid = bookingid;
-		this.userid = userid;
+	public Booking(int spot, int starttime, int endtime, int cost) {
 		this.spot = spot;
-		this.code = code;
-		this.starttime = starttime;
-		this.endtime = endtime;
-		this.carplate = carplate;
+		this.start_time = starttime;
+		this.end_time = endtime;
 		this.cost = cost;
-		this.bookingtime = bookingtime;
 	}
-	public String getBookingid() {
-		return bookingid;
-	}
-	public void setBookingid(String bookingid) {
-		this.bookingid = bookingid;
-	}
-	public String getUserid() {
-		return userid;
-	}
-	public void setUserid(String userid) {
-		this.userid = userid;
-	}
-	public String getSpot() {
+
+	public int getSpot() {
 		return spot;
 	}
-	public void setSpot(String spot) {
+
+	public void setSpot(int spot) {
 		this.spot = spot;
 	}
-	public String getCode() {
-		return code;
+
+	public int getStart_time() {
+		return start_time;
 	}
-	public void setCode(String code) {
-		this.code = code;
+
+	public void setStart_time(int start_time) {
+		this.start_time = start_time;
 	}
-	public String getStarttime() {
-		return starttime;
+
+	public int getEnd_time() {
+		return end_time;
 	}
-	public void setStarttime(String starttime) {
-		this.starttime = starttime;
+
+	public void setEnd_time(int end_time) {
+		this.end_time = end_time;
 	}
-	public String getEndtime() {
-		return endtime;
-	}
-	public void setEndtime(String endtime) {
-		this.endtime = endtime;
-	}
-	public String getCarplate() {
-		return carplate;
-	}
-	public void setCarplate(String carplate) {
-		this.carplate = carplate;
-	}
-	public String getCost() {
+
+	public int getCost() {
 		return cost;
 	}
-	public void setCost(String cost) {
+
+	public void setCost(int cost) {
 		this.cost = cost;
 	}
-	public String getBookingtime() {
-		return bookingtime;
-	}
-	public void setBookingtime(String bookingtime) {
-		this.bookingtime = bookingtime;
-	}
+
 }

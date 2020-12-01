@@ -61,8 +61,9 @@ tr:nth-child(even) {
 				<th>Garage Name</th>
 				<th>Number_Plate</th>
 				<th>Spot</th>
-				<th>Start Time</th>
-				<th>End Time</th>
+				<th>Date</th>
+				<th>Start Hour</th>
+				<th>End Hour</th>
 				<th>Cost</th>
 				<th>Booking Time</th>
 			</tr>
@@ -94,13 +95,14 @@ tr:nth-child(even) {
 				<tr>
 					<td><%=i++%></td>
 					<td><%=rs.getInt(1)%></td>
-					<td><%=Util.getGarageName(rs.getInt(10))%></td>
+					<td><%=Util.getGarageName(rs.getInt(11))%></td>
 					<td><%=Util.getCarNumber(rs.getInt(3))%></td>
 					<td><%=rs.getInt(4)%></td>
 					<td><%=rs.getDate(6)%></td>
-					<td><%=rs.getDate(7)%></td>
+					<td><%=rs.getInt(7)%></td>
 					<td><%=rs.getInt(8)%></td>
-					<td><%=rs.getDate(9)%></td>
+					<td><%=rs.getInt(9)%></td>
+					<td><%=rs.getDate(10)%></td>
 				</tr>
 				<%
 					}
