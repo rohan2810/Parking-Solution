@@ -6,7 +6,7 @@
 </head>
 <link href="../css/homestyles1.css" rel="stylesheet">
 <link href="../css/popup.css" rel="stylesheet">
-<link href="../css/textbox.css" rel="stylesheet">
+<link href="../css/register.css" rel="stylesheet">
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <body>
@@ -22,25 +22,25 @@
 	</header>
 	<div align="center">
 		<h1>Car Register Form</h1>
-		<form action="<%=request.getContextPath()%>/registerCar" method="post">
-			<table style="with: 80%">
+		<form class = "submit" action="<%=request.getContextPath()%>/registerCar" method="post">
+			<table>
 				<tr>
 					<td>Model</td>
-					<td><label> <input type="text" name="model" />
+					<td><label> <input class = "info" type="text" name="model" />
 					</label></td>
 				</tr>
 				<tr>
 					<td>Color</td>
-					<td><label> <input type="text" name="color" />
+					<td><label> <input class = "info" type="text" name="color" />
 					</label></td>
 				</tr>
 				<tr>
-					<td>NumberPlate</td>
-					<td><label> <input type="text" name="numberPlate" />
+					<td>Plate Number</td>
+					<td><label> <input class = "info" type="text" name="numberPlate" />
 					</label></td>
 				</tr>
 			</table>
-			<input type="submit" value="Submit" onclick="myFunction2()" />
+			<input class = "submit" type="submit" value="Submit" onclick="myFunction2()" />
 		</form>
 	</div>
 	<script>

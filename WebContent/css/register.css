@@ -1,0 +1,33 @@
+input{
+    background-color:  #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: auto;
+    border-radius: 10px;
+}
+input.info{
+	width: 350px;
+    font-weight:bold;
+}
+input.submit{
+    margin: 2%;
+    border-radius: 18px;
+    transform: scale(1.2);
+}
+input.already{
+    margin:0 auto;
+    background-color: transparent;
+}
+td{
+    font-size:150%;
+}
+tr{
+    line-height: 350%;
+}

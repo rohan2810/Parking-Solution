@@ -2,11 +2,11 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Garage Register </title>
 </head>
 <link href="../css/homestyles1.css" rel="stylesheet">
 <link href="../css/popup.css" rel="stylesheet">
-<link href="../css/textbox.css" rel="stylesheet">
+<link href="../css/register.css" rel="stylesheet">
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <body>
@@ -27,36 +27,36 @@
 			<table style="with: 80%">
 				<tr>
 					<td>Garage Name</td>
-					<td><label> <input type="text" name="garageName" />
+					<td><label> <input class = "info" type="text" name="garageName" />
 					</label></td>
 				</tr>
 				<tr>
 					<td>Set Cost</td>
-					<td><label> <input type="number" name="setCost" />
+					<td><label> <input class = "info" type="number" name="setCost" min ="0"/>
 					</label></td>
 				</tr>
 				<tr>
 					<td>Zip</td>
-					<td><label> <input type="text" name="zip" />
+					<td><label> <input class = "info" type="text" name="zip" />
 					</label></td>
 				</tr>
 				<tr>
 					<td>Address</td>
-					<td><label> <input type="text" name="garageAddress" />
+					<td><label> <input class = "info" type="text" name="garageAddress" />
 					</label></td>
 				</tr>
 				<tr>
 					<td>Number Of Floors</td>
-					<td><label> <input type="number" name="numberFloors" />
+					<td><label> <input class = "info" type="number" name="numberFloors" min ="1"/>
 					</label></td>
 				</tr>
 				<tr>
 					<td>Number Of Spots</td>
-					<td><label> <input type="number" name="numberSpots" />
+					<td><label> <input class = "info" type="number" name="numberSpots" min ="1"/>
 					</label></td>
 				</tr>
 			</table>
-			<input type="submit" value="Submit" onclick="myFunction2()" />
+			<input class = "submit" type="submit" value="Submit" onclick="myFunction2()" />
 		</form>
 	</div>
 	<script type="text/javascript">
