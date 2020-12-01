@@ -116,7 +116,7 @@ tr:nth-child(even) {
 						type="hidden" name="id"
 						value=<%=Util.getGarageId(rs.getString(7))%>></td>
 					<td><%=rs.getString(8)%></td>
-					<td><%=rs.getInt(9)%></td>
+					<td><%=rs.getInt(10)%></td>
 					<%-- ?id=<%=Util.getGarageId(rs.getString(7))%> --%>
 				</tr>
 				<%

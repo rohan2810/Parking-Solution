@@ -35,7 +35,7 @@
 					<li><a class = "dash" href="../viewYourGaragesOpr.jsp?sortBy=default">View
 							Your Garages</a><input type="hidden" name="sortBy" value="default"></li>
 					<li><a class = "dash" href="../showOwner.jsp">Show owners</a></li>
-					<li><a class = "dash" href="../manageGarageBookings.jsp?sortBy=default">MANAGE
+					<li><a class = "dash" href="../manageGarageBookingsOpr.jsp?sortBy=default">MANAGE
 							GARAGE BOOKINGS</a><input type="hidden" name="sortBy" value="default"></li>
 				</ul>
 			</nav>
