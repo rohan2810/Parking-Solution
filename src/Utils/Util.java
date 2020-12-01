@@ -199,7 +199,8 @@ public class Util {
 
 	public static String getSpot(int garageId) {
 
-		String update = "UPDATE parkingsolution.floor,garage SET floor.Total_Booked= floor.Total_Booked+1 WHERE floor.garage_ID = garage.garage_Id and garage.garage_Id = ?;";
+		String updateFloor = "UPDATE parkingsolution.floor,garage SET floor.Total_Booked= floor.Total_Booked+1 WHERE floor.garage_ID = garage.garage_Id and garage.garage_Id = ?;";
+		String updateGarage = "UPDATE parkingsolution.floor,garage SET garage.Number_Spots = garage.Number_Spots -1  WHERE floor.garage_ID = garage.garage_Id and garage.garage_Id =? and floor.floor_Id = ?;";
 		String getFLoor = "SELECT floor_Id FROM parkingsolution.Floor, Garage where Floor.Garage_Id = Garage.Garage_Id and garage.Garage_Id = ? and floor.Total_Available>0;";
 		String getSpot = "SELECT Spot_Id FROM parkingsolution.Floor, Garage, Spot where Floor.Garage_Id = Garage.Garage_Id and garage.Garage_Id = ? and "
 				+ "floor.floor_Id = ? and spot.Garage_Id = garage.Garage_Id and  spot.Garage_Id = floor.Garage_Id and floor.Total_Available > 0\n"
@@ -208,7 +209,7 @@ public class Util {
 		int floor = 0;
 		int spot = 0;
 		try (Connection connection = Util.getConnection()) {
-			PreparedStatement preparedStatement1 = connection.prepareStatement(update);
+			PreparedStatement preparedStatement1 = connection.prepareStatement(updateFloor);
 			preparedStatement1.setInt(1, garageId);
 			preparedStatement1.executeUpdate();
 
@@ -226,6 +227,13 @@ public class Util {
 			while (rSet1.next()) {
 				spot = rSet1.getInt(1);
 			}
+			
+			
+			PreparedStatement preparedStatement4 = connection.prepareStatement(updateGarage);
+			preparedStatement4.setInt(1, garageId);
+			preparedStatement4.setInt(2, floor);
+			preparedStatement4.executeUpdate();
+			
 
 		} catch (SQLException e) {
 			printSQLException(e);
