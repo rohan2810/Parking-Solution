@@ -32,6 +32,11 @@
 					<li><a class="dash"
 						href="../Registrations/carRegistration.jsp">ADD A NEW CAR</a></li>
 					<li><a class="dash" href="../userCars.jsp">SEE YOUR CARS</a></li>
+					<li>
+						<form action="<%=request.getContextPath()%>/logout">
+							<input class = "submitout" type="submit" value="Logout">
+						</form>
+					</li>
 				</ul>
 			</nav>
 		</div>
@@ -39,9 +44,6 @@
 	<div align="center">
 		<h1 class="title">Customer Dashboard</h1>
 		<h2 class="title">hello ${uname}</h2>
-		<form action="<%=request.getContextPath()%>/logout">
-			<input class="submitout" type="submit" value="Logout">
-		</form>
 		<!-- <form action= "Logout">
 			<a class="btn btn-info btn-lg"> <span
 				class="glyphicon glyphicon-log-out"></span> Log out
