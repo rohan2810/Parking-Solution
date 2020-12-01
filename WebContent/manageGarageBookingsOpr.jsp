@@ -45,20 +45,21 @@ tr:nth-child(even) {
 	</header>
 	<div id="label"></div>
 	<select id="mySelect" name="forma" onchange="location = this.value;">
-		<option value="manageGarageBookings.jsp?sortBy=default">View
+		<option value="manageGarageBookingsOpr.jsp?sortBy=default">View
 			By</option>
-		<option value="manageGarageBookings.jsp?sortBy=default">All
+		<option value="manageGarageBookingsOpr.jsp?sortBy=default">All
 			Bookings</option>
-		<option value="manageGarageBookings.jsp?sortBy=old">Previous
+		<option value="manageGarageBookingsOpr.jsp?sortBy=old">Previous
 			Bookings</option>
-		<option value="manageGarageBookings.jsp?sortBy=new">Advanced
+		<option value="manageGarageBookingsOpr.jsp?sortBy=new">Advanced
 			Bookings</option>
-		<%
-			String username = (String) session.getAttribute("uname");
-		String sortBy = request.getParameter("sortBy");
-		int garageId = Util.getGarageIdFromUsermameOpr(username);
-		%>
 	</select>
+
+	<%
+		String username = (String) session.getAttribute("uname");
+	String sortBy = request.getParameter("sortBy");
+	int garageId = Util.getGarageIdFromUsermameOpr(username);
+	%>
 	<h2 style="color: Tomato;">Booking:</h2>
 	<h2 style="color: Tomato;"><%=Util.getGarageName(garageId)%></h2>
 	<div style="overflow-x: auto;">
