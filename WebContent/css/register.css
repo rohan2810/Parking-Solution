@@ -36,6 +36,11 @@ input.logout{
     background-color: transparent;
     color: white;
 }
+input.booking{
+    color: rgb(231, 231, 231);
+    width: 200px;
+    margin: 2%;
+}
 input.smallfont{
     color: rgb(231, 231, 231);
     font-size-adjust: 0.5;
@@ -45,4 +50,7 @@ td{
 }
 tr{
     line-height: 350%;
+}
+div.booking{
+    height: 10%;
 }

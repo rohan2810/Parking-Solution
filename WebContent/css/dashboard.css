@@ -71,7 +71,9 @@ a.dash {
 	text-decoration: none;
 	color: white;
 }
-
+a.bighome{
+    font-size: 200%;
+}
 header {
 	background: #4CAF50;
 	padding: 6px;
@@ -91,6 +93,10 @@ h1.title{
 }
 h2.title{
 	color: rgb(223, 223, 223);
+}
+h2.timeframe{
+    font-size: 200%;
+    color: #ffffff;
 }
 h3.title {
 	float: left;
