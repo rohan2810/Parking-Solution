@@ -13,7 +13,7 @@ input{
     border-radius: 10px;
 }
 input.info{
-	width: 350px;
+    width: 350px;
     font-weight:bold;
 }
 input.submit{
@@ -24,6 +24,10 @@ input.submit{
 input.already{
     margin:0 auto;
     background-color: transparent;
+}
+input.smallfont{
+    color: rgb(231, 231, 231);
+    font-size-adjust: 0.5;
 }
 td{
     font-size:150%;

@@ -4,51 +4,9 @@
 <title>Parking!</title>
 <link href="css/homestyles.css" rel="stylesheet">
 <link href="css/popup.css" rel="stylesheet">
-<link href="css/textbox.css" rel="stylesheet">
+<link href="css/register.css" rel="stylesheet">
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-.dropbtn {
-	background-color: #4CAF50;
-	color: white;
-	font-size: 30px;
-	border: none;
-}
-
-.dropdown {
-	position: relative;
-	display: inline-block;
-}
-
-.dropdown-content {
-	display: none;
-	position: absolute;
-	background-color: #f1f1f1;
-	min-width: 160px;
-	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-	z-index: 1;
-	bottom: 100%;
-}
-
-.dropdown-content a {
-	color: black;
-	padding: 12px 16px;
-	text-decoration: none;
-	display: block;
-}
-
-.dropdown-content a:hover {
-	background-color: #ddd;
-}
-
-.dropdown:hover .dropdown-content {
-	display: block;
-}
-
-.dropdown:hover .dropbtn {
-	background-color: #3e8e41;
-}
-</style>
 </head>
 <body>
 	<header>
@@ -66,9 +24,9 @@
 		</div>
 	</header>
 
-	<div class="userInput">
+	<div class="biguserInput">
 		<form>
-			<label> <input placeholder="Enter Zip Code...." type="text"
+			<label> <input  class = "smallfont" placeholder="Enter Zip Code" type="text"
 				name="zip"> <input type="hidden" name="sortBy"
 				value="default">
 			</label>
@@ -76,10 +34,10 @@
 				formaction="searchByZip.jsp">get started</button>
 		</form>
 	</div>
-	<section class="right">
+	<section class="belowuserInput">
 		<div>
 			<form class="search" action="searchByName.jsp?sortBy=default">
-				<input type="text" placeholder="Or Search by Garage Name...."
+				<input class = "smallfont" type="text" placeholder="Or Search by Garage"
 					name="search"><input type="hidden" name="sortBy"
 					value="default">
 				<button class="button button1" type="submit">
