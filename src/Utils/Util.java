@@ -1,6 +1,8 @@
 package Utils;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.Random;
 
 public class Util {
 
@@ -208,6 +210,9 @@ public class Util {
 
 		int floor = 0;
 		int spot = 0;
+		ArrayList<Integer> floorList = new ArrayList<Integer>();
+		ArrayList<Integer> spotList = new ArrayList<Integer>();
+		Random randomizer = new Random();
 		try (Connection connection = Util.getConnection()) {
 			PreparedStatement preparedStatement1 = connection.prepareStatement(updateFloor);
 			preparedStatement1.setInt(1, garageId);
@@ -217,23 +222,21 @@ public class Util {
 			preparedStatement2.setInt(1, garageId);
 			ResultSet rSet = preparedStatement2.executeQuery();
 			while (rSet.next()) {
-				floor = rSet.getInt(1);
+				floorList.add(rSet.getInt(1));
 			}
-
+			floor = floorList.get(randomizer.nextInt(floorList.size()));
 			PreparedStatement preparedStatement3 = connection.prepareStatement(getSpot);
 			preparedStatement3.setInt(1, garageId);
 			preparedStatement3.setInt(2, floor);
 			ResultSet rSet1 = preparedStatement3.executeQuery();
 			while (rSet1.next()) {
-				spot = rSet1.getInt(1);
+				spotList.add(rSet1.getInt(1));
 			}
-			
-			
+			spot = spotList.get(randomizer.nextInt(spotList.size()));
 			PreparedStatement preparedStatement4 = connection.prepareStatement(updateGarage);
 			preparedStatement4.setInt(1, garageId);
 			preparedStatement4.setInt(2, floor);
 			preparedStatement4.executeUpdate();
-			
 
 		} catch (SQLException e) {
 			printSQLException(e);
