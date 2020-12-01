@@ -128,8 +128,7 @@ tr:nth-child(even) {
 				<tr>
 					<td><%=rs.getInt(2)%></td>
 					<td><%=rs.getInt(3)%></td>
-					<td><%=rs.getString(4)%><a
-						href='DisplayItems?ItemId=<%=rs.getString(4)%>'><strong>Select
+					<td><%=rs.getString(4)%><a href = "timebooking.jsp"><strong>Select
 								this Garage</strong></a></td>
 					<td><%=rs.getString(5)%></td>
 					<td><%=rs.getString(7)%></td>
