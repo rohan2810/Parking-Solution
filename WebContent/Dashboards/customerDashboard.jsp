@@ -34,7 +34,7 @@
 					<li><a class="dash" href="../userCars.jsp">SEE YOUR CARS</a></li>
 					<li>
 						<form action="<%=request.getContextPath()%>/logout">
-							<input class = "submitout" type="submit" value="Logout">
+							<input class = "submitout" type="submit" value="LOGOUT">
 						</form>
 					</li>
 				</ul>

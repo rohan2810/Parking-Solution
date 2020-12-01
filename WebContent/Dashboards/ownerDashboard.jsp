@@ -46,7 +46,7 @@
 							GARAGE BOOKINGS</a><input type="hidden" name="sortBy" value="default"></li>
 					<li>
 						<form action="<%=request.getContextPath()%>/logout">
-							<input class = "submitout" type="submit" value="Logout">
+							<input class = "submitout" type="submit" value="LOGOUT">
 						</form>
 					</li>
 					<%
