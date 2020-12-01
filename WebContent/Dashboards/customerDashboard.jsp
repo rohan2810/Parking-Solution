@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Customer Dashboard</title>
 <link href="../css/dashboard.css" rel="stylesheet">
 <link href="../css/popup.css" rel="stylesheet">
 <link href="../css/register.css" rel="stylesheet">

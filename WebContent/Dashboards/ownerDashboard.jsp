@@ -9,7 +9,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Owner Dashboard</title>
 <link href="../css/dashboard.css" rel="stylesheet">
 <link href="../css/register.css" rel="stylesheet">
 <link rel="stylesheet"

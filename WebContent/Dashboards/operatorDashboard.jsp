@@ -9,7 +9,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Operator Dashboard</title>
 <link href="../css/dashboard.css" rel="stylesheet">
 <link href="../css/register.css" rel="stylesheet">
 <link rel="stylesheet"
@@ -42,7 +42,7 @@
 		</div>
 	</header>
 	<div align ="center">
-		<h1  class="title">/Operator Dashboard</h1>
+		<h1  class="title">Operator Dashboard</h1>
 		<h2  class="title">hello ${uname}</h2>
 		<form action="<%=request.getContextPath()%>/logout">
 			<input class = "submitout" type="submit" value="Logout">
