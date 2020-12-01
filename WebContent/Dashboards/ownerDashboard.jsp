@@ -49,7 +49,20 @@
 							<input class = "submitout" type="submit" value="LOGOUT">
 						</form>
 					</li>
-					<%
+					
+				</ul>
+			</nav>
+		</div>
+
+
+
+
+
+	</header>
+	<div align="center">
+		<h1 class="title">Owner Dashboard</h1>
+		<h2 class="title">hello ${uname}</h2>
+		<%
 						String username = (String) session.getAttribute("uname");
 					int garageId = Util.getGarageIdFromUsermame(username);
 					try (Connection connection = Util.getConnection()) {
@@ -58,6 +71,7 @@
 						session.setAttribute("gid", garageId);
 						request.setAttribute("gid", garageId);
 					%>
+					<div class="footer">
 					<div class="dropdown">
 						<button onclick="myFunction()" class="dropbtn">Add an
 							Operator to your Garage</button>
@@ -73,18 +87,7 @@
 							%>
 						</div>
 					</div>
-				</ul>
-			</nav>
-		</div>
-
-
-
-
-
-	</header>
-	<div align="center">
-		<h1 class="title">Owner Dashboard</h1>
-		<h2 class="title">hello ${uname}</h2>
+					</div>
 		<!-- <form action= "Logout">
 			<a class="btn btn-info btn-lg"> <span
 				class="glyphicon glyphicon-log-out"></span> Log out
