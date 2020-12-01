@@ -56,7 +56,7 @@ tr:nth-child(even) {
 		<%
 			String username = (String) session.getAttribute("uname");
 		String sortBy = request.getParameter("sortBy");
-		int garageId = Util.getGarageIdFromUsermame(username);
+		int garageId = Util.getGarageIdFromUsermameOpr(username);
 		%>
 	</select>
 	<h2 style="color: Tomato;">Booking:</h2>
@@ -77,8 +77,6 @@ tr:nth-child(even) {
 			<div>
 				<%
 					try (Connection connection = Util.getConnection()) {
-					System.out.println("id");
-					System.out.println(garageId);
 
 					PreparedStatement statement = connection
 					.prepareStatement("SELECT * FROM parkingsolution.Booking WHERE Garage_Id = ?");

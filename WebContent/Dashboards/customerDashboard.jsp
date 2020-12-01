@@ -53,12 +53,12 @@
                     value="default">
                 </label>
                 <button class="button button1" type="submit"
-                    formaction="searchByZip.jsp">get started</button>
+                    formaction="../searchByZip.jsp">get started</button>
             </form>
         </div>
         <section class="belowuserInput1">
             <div>
-                <form class="search" action="searchByName.jsp?sortBy=default">
+                <form class="search" action="../searchByName.jsp?sortBy=default">
                     <input class = "smallfont" type="text" placeholder="Or Search by Garage"
                         name="search"><input type="hidden" name="sortBy"
                         value="default">
