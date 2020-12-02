@@ -226,7 +226,7 @@ values (1, 1, now(), now(), 67, 0, true),
        (12, 12, now(), now(), 56, 0, true),
        (13, 13, now(), now(), 78, 0, true),
        (14, 14, now(), now(), 89, 1, true),
-       (15, 15, now(), now(), 45, 0, true),
+       (15, 15, now(), now(), 45, 2, true),
        (16, 16, now(), now(), 34, 0, true),
        (17, 17, now(), now(), 45, 2, true),
        (18, 18, now(), now(), 49, 0, true);
