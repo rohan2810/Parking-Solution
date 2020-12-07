@@ -116,8 +116,13 @@ tr:nth-child(even) {
 						type="hidden" name="id"
 						value=<%=Util.getGarageId(rs.getString(7))%>></td>
 					<td><%=rs.getString(8)%></td>
-					<td><%=rs.getInt(10)%></td>
-					<%-- ?id=<%=Util.getGarageId(rs.getString(7))%> --%>
+					<td><%=rs.getInt(10)%>
+					<a
+						href="updateGarage.jsp?id=<%=Util.getGarageId(rs.getString(7))%>"
+						><strong>Update This Garage</strong></a><input
+						type="hidden" name="id"
+						value=<%=Util.getGarageId(rs.getString(7))%>>
+					</td>
 				</tr>
 				<%
 					}

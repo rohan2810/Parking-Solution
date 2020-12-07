@@ -199,6 +199,28 @@ public class Util {
 		return cost;
 	}
 
+	public static void updateGarage(int garageId, int floor, int spot) {
+		String updateFloor = "update parkingsolution.garage set Number_Floors = ? where Garage_Id = ?";
+		String updateSpot = "update parkingsolution.garage set Number_Spots = ? where Garage_Id = ?";
+		
+		try (Connection connection = Util.getConnection()) {
+			PreparedStatement preparedStatement1 = connection.prepareStatement(updateFloor);
+			preparedStatement1.setInt(1, floor);
+			preparedStatement1.setInt(2, garageId);
+			preparedStatement1.executeUpdate();
+			
+			
+			
+			PreparedStatement preparedStatement2 = connection.prepareStatement(updateSpot);
+			preparedStatement2.setInt(1, spot);
+			preparedStatement2.setInt(2, garageId);
+			preparedStatement2.executeUpdate();
+
+		} catch (SQLException e) {
+			printSQLException(e);
+		}
+	}
+	
 	public static String getSpot(int garageId) {
 
 		String updateFloor = "UPDATE parkingsolution.floor,garage SET floor.Total_Booked= floor.Total_Booked+1 WHERE floor.garage_ID = garage.garage_Id and garage.garage_Id = ?;";
