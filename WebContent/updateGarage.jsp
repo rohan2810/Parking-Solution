@@ -8,6 +8,9 @@
 <%@ page import="java.sql.SQLException"%>
 <html>
 <head>
+<link href="css/homestyles1.css" rel="stylesheet">
+<link href="css/popup.css" rel="stylesheet">
+<link href="css/register.css" rel="stylesheet">
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
